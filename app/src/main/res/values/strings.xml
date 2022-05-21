@@ -1,8 +1,18 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Translation instructions can be found in the Readme -->
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Common strings -->
+    <!-- Feel free to actually translate the title -->
     <string name="app_name">Mute reminder</string>
-    <string name="media_not_muted">Media not muted</string>
-    <string name="background_service">Background service</string>
-    <string name="alerts">Alert</string>
-    <string name="background_service_description">You can hide this notification category</string>
+
+    <!-- MainActivity -->
     <string name="main_activity_hint">A notification is shown if ringtone is muted, but media isn\'t and media would be played over local speakers.</string>
+
+    <!-- Notifications -->
+    <string name="notification_reminder_text">Media not muted</string>
+    <string name="notification_reminder_title">Reminder</string>
+    <string name="notification_background_title">Background service</string>
+    <string name="notification_background_summary">You can hide this notification category</string>
 </resources>

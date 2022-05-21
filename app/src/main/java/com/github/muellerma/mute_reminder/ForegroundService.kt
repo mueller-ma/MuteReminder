@@ -73,8 +73,8 @@ class ForegroundService : Service() {
             Log.d(TAG, "Show notification")
 
             val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ALERT_ID)
-                .setContentTitle(getString(R.string.media_not_muted))
-                .setTicker(getString(R.string.media_not_muted))
+                .setContentTitle(getString(R.string.notification_reminder_text))
+                .setTicker(getString(R.string.notification_reminder_text))
                 .setSmallIcon(R.drawable.ic_baseline_volume_mute_24)
                 .setOngoing(false)
                 .setShowWhen(true)
@@ -124,7 +124,7 @@ class ForegroundService : Service() {
         with(
             NotificationChannel(
                 NOTIFICATION_CHANNEL_SERVICE_ID,
-                getString(R.string.background_service),
+                getString(R.string.notification_background_title),
                 NotificationManager.IMPORTANCE_MIN
             )
         ) {
@@ -132,14 +132,14 @@ class ForegroundService : Service() {
             enableVibration(false)
             enableLights(false)
             setSound(null, null)
-            description = getString(R.string.background_service_description)
+            description = getString(R.string.notification_background_summary)
             nm.createNotificationChannel(this)
         }
 
         with(
             NotificationChannel(
                 NOTIFICATION_CHANNEL_ALERT_ID,
-                getString(R.string.alerts),
+                getString(R.string.notification_reminder_title),
                 NotificationManager.IMPORTANCE_HIGH
             )
         ) {
@@ -159,9 +159,9 @@ class ForegroundService : Service() {
         createNotificationChannels()
 
         val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_SERVICE_ID)
-            .setContentTitle(getString(R.string.background_service))
-            .setTicker(getString(R.string.background_service))
-            .setContentText(getString(R.string.background_service_description))
+            .setContentTitle(getString(R.string.notification_background_title))
+            .setTicker(getString(R.string.notification_background_title))
+            .setContentText(getString(R.string.notification_background_summary))
             .setSmallIcon(R.drawable.ic_baseline_volume_mute_24)
             .setOngoing(true)
             .setShowWhen(true)
