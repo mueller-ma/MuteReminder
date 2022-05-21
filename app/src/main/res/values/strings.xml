@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mute reminder</string>
+    <string name="media_not_muted">Media not muted</string>
+    <string name="background_service">Background service</string>
+    <string name="alerts">Alert</string>
+    <string name="background_service_description">You can hide this notification category</string>
+    <string name="main_activity_hint">A notification is shown if ringtone is muted, but media isn\'t and media would be played over local speakers.</string>
+</resources>
