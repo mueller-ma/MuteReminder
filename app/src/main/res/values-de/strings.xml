@@ -4,5 +4,10 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <!-- MainActivity -->
+    <string name="main_activity_hint">Eine Benachrichtigung wird angezeigt, wenn der Klingelton stummgeschalten ist und Medien über lokale Lautsprecher abgespielt werden würden.</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Medien nicht stummgeschaltet</string>
+    <string name="notification_reminder_title">Erinnerung</string>
+    <string name="notification_background_title">Hintergrunddienst</string>
+    <string name="notification_background_summary">Du kannst diese Benachrichtigungskategorie ausblenden</string>
 </resources>
