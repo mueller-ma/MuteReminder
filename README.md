@@ -6,9 +6,9 @@
 
 A notification is shown if ringtone is muted, but media isn't and media would be played over local speakers.
 
-<!-- [<img src="assets/get-it-on-fdroid.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/de/packages/com.github.muellerma.mute_reminder/)
+[<img src="assets/get-it-on-fdroid.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/de/packages/com.github.muellerma.mute_reminder/)
 
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" alt="Screenshot" width=200px> -->
+<!--<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" alt="Screenshot" width=200px> -->
 
 ## Translations
 
