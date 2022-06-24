@@ -3,6 +3,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Susturma hatırlatıcısı</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Zil sesi kapatılmış ancak medya kapatılmamışsa ve medya yerel hoparlörler üzerinden çalınıyorsa bir bildirim gösterilir.</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Medya sessize alınmamış</string>
+    <string name="notification_reminder_title">Hatırlatıcı</string>
+    <string name="notification_background_title">Arka plan hizmeti</string>
+    <string name="notification_background_summary">Bu bildirim kategorisini gizleyebilirsiniz</string>
 </resources>

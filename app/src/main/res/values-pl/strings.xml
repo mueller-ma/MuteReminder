@@ -4,5 +4,10 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <!-- MainActivity -->
+    <string name="main_activity_hint">Wyświetla powiadomienie, jeśli dzwonek jest wyciszony, ale multimedia nie są i mogą być odtwarzane przez lokalne głośniki.</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Multimedia nie wyciszone</string>
+    <string name="notification_reminder_title">Przypomnienie</string>
+    <string name="notification_background_title">Usługa w tle</string>
+    <string name="notification_background_summary">Możesz ukryć tę kategorię powiadomień</string>
 </resources>
