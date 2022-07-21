@@ -10,6 +10,12 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.github.setOnClickListener {
+            "https://github.com/mueller-ma/MuteReminder".openInBrowser(this)
+        }
+
+        binding.version.text = getString(R.string.version, BuildConfig.VERSION_NAME)
+
         ForegroundService.changeState(this, true)
     }
 }

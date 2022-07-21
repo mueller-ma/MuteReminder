@@ -9,6 +9,9 @@
 
     <!-- MainActivity -->
     <string name="main_activity_hint">A notification is shown if ringtone is muted, but media isn\'t and media would be played over local speakers.</string>
+    <string name="report_issues_github">Report issues on GitHub</string>
+    <string name="error_no_browser_found">No browser found</string>
+    <string name="version">Version %s</string>
 
     <!-- Notifications -->
     <string name="notification_reminder_text">Media not muted</string>
