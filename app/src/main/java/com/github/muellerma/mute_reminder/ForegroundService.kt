@@ -80,7 +80,7 @@ class ForegroundService : Service() {
             val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ALERT_ID)
                 .setContentTitle(getString(R.string.notification_reminder_text))
                 .setTicker(getString(R.string.notification_reminder_text))
-                .setSmallIcon(R.drawable.ic_baseline_volume_mute_24)
+                .setSmallIcon(R.drawable.ic_baseline_volume_up_24)
                 .setOngoing(false)
                 .setShowWhen(true)
                 .setWhen(System.currentTimeMillis())
