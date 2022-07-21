@@ -10,7 +10,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.database.ContentObserver
-import android.graphics.Color
 import android.media.AudioDeviceInfo
 import android.media.AudioManager
 import android.os.Build
@@ -84,7 +83,7 @@ class ForegroundService : Service() {
                 .setOngoing(false)
                 .setShowWhen(true)
                 .setWhen(System.currentTimeMillis())
-                .setColor(ContextCompat.getColor(applicationContext, R.color.purple_700))
+                .setColor(ContextCompat.getColor(applicationContext, R.color.purple_500))
                 .setCategory(NotificationCompat.CATEGORY_SERVICE)
 
             nm.notify(NOTIFICATION_ALERT_ID, notificationBuilder.build())
@@ -153,7 +152,7 @@ class ForegroundService : Service() {
             setShowBadge(true)
             enableVibration(false)
             enableLights(true)
-            lightColor = Color.RED
+            lightColor = ContextCompat.getColor(this@ForegroundService, R.color.purple_500)
             setSound(null, null)
             nm.createNotificationChannel(this)
         }
