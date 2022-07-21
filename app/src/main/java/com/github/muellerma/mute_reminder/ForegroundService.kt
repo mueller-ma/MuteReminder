@@ -57,15 +57,20 @@ class ForegroundService : Service() {
         val mediaVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
         Log.d(TAG, "handleVolumeChanged(): ring: $ringVolume, media: $mediaVolume")
 
-        val bluetoothOutput = audioManager
-            .getDevices(AudioManager.GET_DEVICES_OUTPUTS)
-            .filter { device -> device.type == AudioDeviceInfo.TYPE_BLUETOOTH_A2DP }
+        val hasBluetoothOutput = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            val bluetoothOutputs = audioManager
+                .getDevices(AudioManager.GET_DEVICES_OUTPUTS)
+                .filter { device -> device.type == AudioDeviceInfo.TYPE_BLUETOOTH_A2DP }
 
-        Log.d(TAG, "Connected to ${bluetoothOutput.joinToString(", ") { it.productName }}")
+            Log.d(TAG, "Connected to ${bluetoothOutputs.joinToString(", ") { it.productName }}")
+            bluetoothOutputs.isNotEmpty()
+        } else {
+            false
+        }
 
         val nm = getSystemService<NotificationManager>()!!
 
-        val mediaNotMutedButOnBluetooth = mediaVolume > 0 && bluetoothOutput.isNotEmpty()
+        val mediaNotMutedButOnBluetooth = mediaVolume > 0 && hasBluetoothOutput
         if (ringVolume > 0 || mediaVolume == 0 || mediaNotMutedButOnBluetooth) {
             Log.d(TAG, "Hide notification")
             nm.cancel(NOTIFICATION_ALERT_ID)
@@ -101,7 +106,9 @@ class ForegroundService : Service() {
 
         val intentFilter = IntentFilter().apply {
             addAction(AudioManager.RINGER_MODE_CHANGED_ACTION)
-            addAction(NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                addAction(NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED)
+            }
             addAction(BluetoothDevice.ACTION_ACL_CONNECTED)
             addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED)
             addAction(BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED)
