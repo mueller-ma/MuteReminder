@@ -1,0 +1,1 @@
+Fix crash on some Android versions
