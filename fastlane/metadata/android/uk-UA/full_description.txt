@@ -1,1 +1,1 @@
-A notification is shown if ringtone is muted, but media isn't and media would be played over local speakers.
+Показує сповіщення, коли режим без звуку ввімкнено для викликів, але не для мультимедіа, через що ваш динамік може несподівано почати гучне відтворення.

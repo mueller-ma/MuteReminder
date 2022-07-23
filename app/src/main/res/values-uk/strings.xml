@@ -3,6 +3,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Цить</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Показує сповіщення, коли режим без звуку ввімкнено для викликів, але не для мультимедіа, через що ваш динамік може несподівано почати гучне відтворення.</string>
+    <string name="report_issues_github">Звіти про вади — на GitHub</string>
+    <string name="error_no_browser_found">Вебпереглядача не знайдено</string>
+    <string name="version">Версія %s</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Мультимедіа не заглушено</string>
+    <string name="notification_reminder_title">Нагадування</string>
+    <string name="notification_background_title">Фонова служба</string>
+    <string name="notification_background_summary">Можете сховати цю категорію сповіщень</string>
 </resources>
