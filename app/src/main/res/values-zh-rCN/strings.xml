@@ -3,6 +3,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">静音提示器</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">在检测到铃声静音了但是媒体没静音，并且没有连接无线耳机、无线音箱时弹出通知。</string>
+    <string name="report_issues_github">在 GitHub 里反馈问题</string>
+    <string name="error_no_browser_found">没发现浏览器应用</string>
+    <string name="version">当前版本：%s</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">没有静音媒体音量</string>
+    <string name="notification_reminder_title">提示</string>
+    <string name="notification_background_title">后台服务</string>
+    <string name="notification_background_summary">这条通知所属的类别是可以在设置中关闭的</string>
 </resources>

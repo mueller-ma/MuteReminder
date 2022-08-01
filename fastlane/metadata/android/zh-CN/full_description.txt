@@ -1,1 +1,1 @@
-A notification is shown if ringtone is muted, but media isn't and media would be played over local speakers.
+在检测到铃声静音了但是媒体没静音，并且没有连接无线耳机、无线音箱时弹出通知。
