@@ -10,7 +10,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.database.ContentObserver
-import android.media.AudioDeviceInfo
 import android.media.AudioManager
 import android.os.Build
 import android.os.Handler
@@ -24,7 +23,7 @@ import androidx.core.content.getSystemService
 
 
 class ForegroundService : Service() {
-    private lateinit var audioManager: AudioManager
+    private lateinit var mediaAudioManager: MediaAudioManager
     private val volumeObserver = object : ContentObserver(Handler(Looper.getMainLooper())) {
         override fun deliverSelfNotifications() = false
 
@@ -35,7 +34,7 @@ class ForegroundService : Service() {
     }
     private val muteListener = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            Log.d(TAG, "muteListener onReceive()")
+            Log.d(TAG, "muteListener onReceive(intent=${intent.action})")
 
             val bluetoothActions = listOf(
                 BluetoothDevice.ACTION_ACL_CONNECTED,
@@ -52,28 +51,8 @@ class ForegroundService : Service() {
     }
 
     private fun handleVolumeChanged() {
-        val ringVolume = audioManager.getStreamVolume(AudioManager.STREAM_RING)
-        val mediaVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
-        Log.d(TAG, "handleVolumeChanged(): ring: $ringVolume, media: $mediaVolume")
-
-        val hasBluetoothOutput = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val bluetoothOutputs = audioManager
-                .getDevices(AudioManager.GET_DEVICES_OUTPUTS)
-                .filter { device -> device.type == AudioDeviceInfo.TYPE_BLUETOOTH_A2DP }
-
-            Log.d(TAG, "Connected to ${bluetoothOutputs.joinToString(", ") { it.productName }}")
-            bluetoothOutputs.isNotEmpty()
-        } else {
-            false
-        }
-
         val nm = getSystemService<NotificationManager>()!!
-
-        val mediaNotMutedButOnBluetooth = mediaVolume > 0 && hasBluetoothOutput
-        if (ringVolume > 0 || mediaVolume == 0 || mediaNotMutedButOnBluetooth) {
-            Log.d(TAG, "Hide notification")
-            nm.cancel(NOTIFICATION_ALERT_ID)
-        } else {
+        if (mediaAudioManager.shouldNotify()) {
             Log.d(TAG, "Show notification")
 
             val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ALERT_ID)
@@ -87,6 +66,9 @@ class ForegroundService : Service() {
                 .setCategory(NotificationCompat.CATEGORY_SERVICE)
 
             nm.notify(NOTIFICATION_ALERT_ID, notificationBuilder.build())
+        } else {
+            Log.d(TAG, "Hide notification")
+            nm.cancel(NOTIFICATION_ALERT_ID)
         }
     }
 
@@ -95,7 +77,7 @@ class ForegroundService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand()")
 
-        audioManager = getSystemService()!!
+        mediaAudioManager = MediaAudioManager(this)
         // Register for volume changes
         applicationContext.contentResolver.registerContentObserver(
             Settings.System.CONTENT_URI,
@@ -104,13 +86,22 @@ class ForegroundService : Service() {
         )
 
         val intentFilter = IntentFilter().apply {
+            addAction(AudioManager.ACTION_AUDIO_BECOMING_NOISY)
+            addAction(AudioManager.ACTION_SCO_AUDIO_STATE_UPDATED)
             addAction(AudioManager.RINGER_MODE_CHANGED_ACTION)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                addAction(NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED)
-            }
             addAction(BluetoothDevice.ACTION_ACL_CONNECTED)
             addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED)
             addAction(BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                addAction(AudioManager.ACTION_HDMI_AUDIO_PLUG)
+                addAction(AudioManager.ACTION_HEADSET_PLUG)
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                addAction(NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED)
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                addAction(AudioManager.ACTION_SPEAKERPHONE_STATE_CHANGED)
+            }
         }
         // Register for DND and bluetooth changes
         registerReceiver(muteListener, intentFilter)
