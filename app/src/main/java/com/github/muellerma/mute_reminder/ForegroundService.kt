@@ -59,7 +59,7 @@ class ForegroundService : Service() {
                 .setContentTitle(getString(R.string.notification_reminder_text))
                 .setTicker(getString(R.string.notification_reminder_text))
                 .setSmallIcon(R.drawable.ic_baseline_volume_up_24)
-                .setOngoing(false)
+                .setOngoing(true)
                 .setShowWhen(true)
                 .setWhen(System.currentTimeMillis())
                 .setColor(ContextCompat.getColor(applicationContext, R.color.purple_500))
