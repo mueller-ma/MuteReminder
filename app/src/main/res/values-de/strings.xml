@@ -3,6 +3,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Mute Reminder</string>
     <!-- MainActivity -->
     <string name="main_activity_hint">Eine Benachrichtigung wird angezeigt, wenn der Klingelton stummgeschalten ist und Medien über lokale Lautsprecher abgespielt werden würden.</string>
     <string name="report_issues_github">Fehler auf GitHub melden</string>
