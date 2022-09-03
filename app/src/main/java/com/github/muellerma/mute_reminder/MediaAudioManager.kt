@@ -11,7 +11,7 @@ class MediaAudioManager(context: Context) {
     private val audioManager: AudioManager = context.getSystemService()!!
 
     fun shouldNotify(): Boolean {
-        return isRingToneMuted() && (!isMediaMuted() && !usesRemoteOutput())
+        return isRingToneMuted() && !isMediaMuted() && !usesRemoteOutput()
     }
 
     private fun isMediaMuted(): Boolean {
