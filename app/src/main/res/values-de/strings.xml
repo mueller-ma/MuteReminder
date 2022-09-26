@@ -8,7 +8,7 @@
     <string name="main_activity_hint">Eine Benachrichtigung wird angezeigt, wenn der Klingelton stummgeschalten ist und Medien über lokale Lautsprecher abgespielt werden würden.</string>
     <string name="report_issues_github">Fehler auf GitHub melden</string>
     <string name="error_no_browser_found">Kein Browser gefunden</string>
-    <string name="version">Version %s</string>
+    <string name="app_version">Version %s</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Medien nicht stummgeschaltet</string>
     <string name="notification_reminder_title">Erinnerung</string>

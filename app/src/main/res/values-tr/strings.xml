@@ -8,7 +8,7 @@
     <string name="main_activity_hint">Zil sesi kapatılmış ancak medya kapatılmamışsa ve medya yerel hoparlörler üzerinden çalınıyorsa bir bildirim gösterilir.</string>
     <string name="report_issues_github">GitHub\'da sorun bildir</string>
     <string name="error_no_browser_found">Tarayıcı bulunamadı</string>
-    <string name="version">Sürüm %s</string>
+    <string name="app_version">Sürüm %s</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Medya sessize alınmamış</string>
     <string name="notification_reminder_title">Hatırlatıcı</string>
