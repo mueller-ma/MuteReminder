@@ -9,10 +9,13 @@ import androidx.core.content.getSystemService
 
 class MediaAudioManager(context: Context) {
     private val audioManager: AudioManager = context.getSystemService()!!
+    private val prefs = Prefs(context)
 
     fun shouldNotify(): Boolean {
-        return isRingToneMuted() && !isMediaMuted() && !usesRemoteOutput()
+        return (isRingToneMuted() || isRingToneIgnored()) && !isMediaMuted() && !usesRemoteOutput()
     }
+
+    private fun isRingToneIgnored() = prefs.ignoreRingTone
 
     private fun isMediaMuted(): Boolean {
         val mediaVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)

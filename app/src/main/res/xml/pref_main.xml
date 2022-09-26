@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/general">
+        <SwitchPreferenceCompat
+            android:key="ignore_ring_tone"
+            android:defaultValue="false"
+            android:title="Ignore ring volume"
+            app:defaultValue="false"
+            />
+    </PreferenceCategory>
     <PreferenceCategory>
         <Preference
             android:key="about"

@@ -5,10 +5,7 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.Service
 import android.bluetooth.BluetoothDevice
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
+import android.content.*
 import android.database.ContentObserver
 import android.media.AudioManager
 import android.os.Build
@@ -24,6 +21,7 @@ import androidx.core.content.getSystemService
 
 class ForegroundService : Service() {
     private lateinit var mediaAudioManager: MediaAudioManager
+    private lateinit var prefs: Prefs
     private val volumeObserver = object : ContentObserver(Handler(Looper.getMainLooper())) {
         override fun deliverSelfNotifications() = false
 
@@ -48,6 +46,10 @@ class ForegroundService : Service() {
             }
             handleVolumeChanged()
         }
+    }
+
+    private val prefsListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+        if(key == Prefs.IGNORE_RING_TONE) handleVolumeChanged()
     }
 
     private fun handleVolumeChanged() {
@@ -78,6 +80,7 @@ class ForegroundService : Service() {
         Log.d(TAG, "onStartCommand()")
 
         mediaAudioManager = MediaAudioManager(this)
+        prefs = Prefs(this)
         // Register for volume changes
         applicationContext.contentResolver.registerContentObserver(
             Settings.System.CONTENT_URI,
@@ -105,7 +108,7 @@ class ForegroundService : Service() {
         }
         // Register for DND and bluetooth changes
         registerReceiver(muteListener, intentFilter)
-
+        prefs.sharedPrefs.registerOnSharedPreferenceChangeListener(prefsListener)
         handleVolumeChanged()
 
         return START_STICKY
@@ -172,6 +175,7 @@ class ForegroundService : Service() {
         Log.d(TAG, "onDestroy()")
         super.onDestroy()
         applicationContext.contentResolver.unregisterContentObserver(volumeObserver)
+        prefs.sharedPrefs.unregisterOnSharedPreferenceChangeListener(prefsListener)
         unregisterReceiver(muteListener)
     }
 
