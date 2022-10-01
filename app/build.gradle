@@ -2,6 +2,7 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "kotlin-parcelize"
+    id "com.mikepenz.aboutlibraries.plugin"
 }
 
 android {
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.github.muellerma.mute_reminder"
-        minSdk 14
+        minSdk 21
         targetSdk 33
         versionCode 6
         versionName "1.5"
@@ -48,6 +49,9 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation "androidx.core:core-ktx:1.9.0"
     implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation "androidx.preference:preference-ktx:1.2.0"
+    implementation "com.google.android.material:material:1.6.1"
+    implementation "com.mikepenz:aboutlibraries:$about_libraries_version"
 }

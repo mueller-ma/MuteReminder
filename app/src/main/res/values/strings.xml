@@ -11,11 +11,18 @@
     <string name="main_activity_hint">A notification is shown if ringtone is muted, but media isn\'t and media would be played over local speakers.</string>
     <string name="report_issues_github">Report issues on GitHub</string>
     <string name="error_no_browser_found">No browser found</string>
-    <string name="version">Version %s</string>
 
     <!-- Notifications -->
     <string name="notification_reminder_text">Media not muted</string>
     <string name="notification_reminder_title">Reminder</string>
     <string name="notification_background_title">Background service</string>
     <string name="notification_background_summary">You can hide this notification category</string>
+
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+
+    <!-- About menu -->
+    <string name="aboutLibraries_description_special1_name" translatable="false">GitHub</string>
+    <string name="aboutLibraries_description_special2_name" translatable="false">F-Droid</string>
+    <string name="aboutLibraries_description_special3_name" translatable="false">Crowdin</string>
 </resources>

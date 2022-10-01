@@ -20,6 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.github.muellerma.mute_reminder.PreferenceActivity"
+            android:exported="false"
+            />
 
         <receiver
                 android:name=".BootReceiver"

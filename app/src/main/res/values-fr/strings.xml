@@ -8,7 +8,6 @@
     <string name="main_activity_hint">Une notification s\'affiche si la sonnerie du téléphone est mise en sourdine mais que les médias ne le sont pas, et que le média serait lu sur le haut-parleur du téléphone.</string>
     <string name="report_issues_github">Signaler des problèmes sur GitHub</string>
     <string name="error_no_browser_found">Aucun navigateur trouvé</string>
-    <string name="version">Version %s</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Média non mis en sourdine</string>
     <string name="notification_reminder_title">Rappel</string>
