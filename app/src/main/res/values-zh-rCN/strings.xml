@@ -13,4 +13,5 @@
     <string name="notification_reminder_title">提示</string>
     <string name="notification_background_title">后台服务</string>
     <string name="notification_background_summary">这条通知所属的类别是可以在设置中关闭的</string>
+    <!-- About menu -->
 </resources>
