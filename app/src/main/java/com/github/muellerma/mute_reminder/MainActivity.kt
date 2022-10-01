@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
             "https://github.com/mueller-ma/MuteReminder".openInBrowser(this)
         }
 
-        binding.version.text = getString(R.string.app_version, BuildConfig.VERSION_NAME)
-
         ForegroundService.changeState(this, true)
     }
 

@@ -8,7 +8,6 @@
     <string name="main_activity_hint">Показує сповіщення, коли режим без звуку ввімкнено для викликів, але не для мультимедіа, через що ваш динамік може несподівано почати гучне відтворення.</string>
     <string name="report_issues_github">Звіти про вади — на GitHub</string>
     <string name="error_no_browser_found">Вебпереглядача не знайдено</string>
-    <string name="app_version">Версія %s</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Мультимедіа не заглушено</string>
     <string name="notification_reminder_title">Нагадування</string>
