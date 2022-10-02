@@ -13,4 +13,5 @@
     <string name="notification_reminder_title">Rappel</string>
     <string name="notification_background_title">Service en arrière-plan</string>
     <string name="notification_background_summary">Vous pouvez masquer cette catégorie de notification</string>
+    <!-- About menu -->
 </resources>

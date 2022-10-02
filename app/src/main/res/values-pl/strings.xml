@@ -12,4 +12,7 @@
     <string name="notification_reminder_title">Przypomnienie</string>
     <string name="notification_background_title">Usługa w tle</string>
     <string name="notification_background_summary">Możesz ukryć tę kategorię powiadomień</string>
+    <string name="settings">Ustawienia</string>
+    <string name="about">Informacje</string>
+    <!-- About menu -->
 </resources>

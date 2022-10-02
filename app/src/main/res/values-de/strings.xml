@@ -13,4 +13,5 @@
     <string name="notification_reminder_title">Erinnerung</string>
     <string name="notification_background_title">Hintergrunddienst</string>
     <string name="notification_background_summary">Du kannst diese Benachrichtigungskategorie ausblenden</string>
+    <!-- About menu -->
 </resources>
