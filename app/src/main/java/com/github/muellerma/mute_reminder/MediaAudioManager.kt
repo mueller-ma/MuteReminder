@@ -12,10 +12,8 @@ class MediaAudioManager(context: Context) {
     private val prefs = Prefs(context)
 
     fun shouldNotify(): Boolean {
-        return (isRingToneMuted() || isRingToneIgnored()) && !isMediaMuted() && !usesRemoteOutput()
+        return (isRingToneMuted() || prefs.ignoreRingTone) && !isMediaMuted() && !usesRemoteOutput()
     }
-
-    private fun isRingToneIgnored() = prefs.ignoreRingTone
 
     private fun isMediaMuted(): Boolean {
         val mediaVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/general">
         <SwitchPreferenceCompat
-            android:key="ignore_ring_tone"
-            android:defaultValue="false"
-            android:title="Ignore ring volume"
-            app:defaultValue="false"
-            />
+            android:key="notify_only_when_muted"
+            android:defaultValue="true"
+            android:title="@string/notify_only_when_muted" />
     </PreferenceCategory>
     <PreferenceCategory>
         <Preference

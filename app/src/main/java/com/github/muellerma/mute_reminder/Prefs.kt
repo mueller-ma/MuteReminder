@@ -10,10 +10,10 @@ class Prefs(context: Context) {
         private set
 
     var ignoreRingTone: Boolean
-        get() = sharedPrefs.getBoolean(IGNORE_RING_TONE, false)
+        get() = sharedPrefs.getBoolean(IGNORE_RING_TONE, true)
         set(value) = sharedPrefs.edit { putBoolean(IGNORE_RING_TONE, value) }
 
     companion object {
-        const val IGNORE_RING_TONE = "ignore_ring_tone"
+        const val IGNORE_RING_TONE = "notify_only_when_muted"
     }
 }

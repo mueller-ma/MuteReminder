@@ -17,12 +17,14 @@
     <string name="notification_background_title">Background service</string>
     <string name="notification_background_summary">You can hide this notification category</string>
 
+    <!-- Settings -->
     <string name="settings">Settings</string>
+    <string name="general">General</string>
+    <string name="notify_only_when_muted">Notify only when ring tone is muted</string>
     <string name="about">About</string>
 
     <!-- About menu -->
     <string name="aboutLibraries_description_special1_name" translatable="false">GitHub</string>
     <string name="aboutLibraries_description_special2_name" translatable="false">F-Droid</string>
     <string name="aboutLibraries_description_special3_name" translatable="false">Crowdin</string>
-    <string name="general">General</string>
 </resources>
