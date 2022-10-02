@@ -5,7 +5,6 @@
     <!-- Feel free to actually translate the title -->
     <!-- MainActivity -->
     <string name="main_activity_hint">Wyświetla powiadomienie, jeśli dzwonek jest wyciszony, ale multimedia nie są i mogą być odtwarzane przez lokalne głośniki.</string>
-    <string name="report_issues_github">Zgłoś problem na GitHub</string>
     <string name="error_no_browser_found">Nie znaleziono przeglądarki</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Multimedia nie wyciszone</string>
