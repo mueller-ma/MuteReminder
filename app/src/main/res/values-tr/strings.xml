@@ -6,7 +6,6 @@
     <string name="app_name">Susturma hatırlatıcısı</string>
     <!-- MainActivity -->
     <string name="main_activity_hint">Zil sesi kapatılmış ancak medya kapatılmamışsa ve medya yerel hoparlörler üzerinden çalınıyorsa bir bildirim gösterilir.</string>
-    <string name="report_issues_github">GitHub\'da sorun bildir</string>
     <string name="error_no_browser_found">Tarayıcı bulunamadı</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Medya sessize alınmamış</string>
