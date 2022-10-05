@@ -12,7 +12,7 @@ class MediaAudioManager(context: Context) {
     private val prefs = Prefs(context)
 
     fun shouldNotify(): Boolean {
-        return (isRingToneMuted() || prefs.ignoreRingTone) && !isMediaMuted() && !usesRemoteOutput()
+        return (!prefs.notifyOnlyWhenMuted || isRingToneMuted()) && !isMediaMuted() && !usesRemoteOutput()
     }
 
     private fun isMediaMuted(): Boolean {

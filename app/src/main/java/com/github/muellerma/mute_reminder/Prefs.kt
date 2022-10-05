@@ -9,11 +9,11 @@ class Prefs(context: Context) {
     var sharedPrefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         private set
 
-    var ignoreRingTone: Boolean
-        get() = sharedPrefs.getBoolean(IGNORE_RING_TONE, true)
-        set(value) = sharedPrefs.edit { putBoolean(IGNORE_RING_TONE, value) }
+    var notifyOnlyWhenMuted: Boolean
+        get() = sharedPrefs.getBoolean(NOTIFY_ONLY_WHEN_MUTED, true)
+        set(value) = sharedPrefs.edit { putBoolean(NOTIFY_ONLY_WHEN_MUTED, value) }
 
     companion object {
-        const val IGNORE_RING_TONE = "notify_only_when_muted"
+        const val NOTIFY_ONLY_WHEN_MUTED = "notify_only_when_muted"
     }
 }

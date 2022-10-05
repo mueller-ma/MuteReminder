@@ -49,7 +49,7 @@ class ForegroundService : Service() {
     }
 
     private val prefsListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
-        if (key == Prefs.IGNORE_RING_TONE) handleVolumeChanged()
+        if (key == Prefs.NOTIFY_ONLY_WHEN_MUTED) handleVolumeChanged()
     }
 
     private fun handleVolumeChanged() {
