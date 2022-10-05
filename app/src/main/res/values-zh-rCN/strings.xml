@@ -6,7 +6,6 @@
     <string name="app_name">静音提示器</string>
     <!-- MainActivity -->
     <string name="main_activity_hint">在检测到铃声静音了但是媒体没静音，并且没有连接无线耳机、无线音箱时弹出通知。</string>
-    <string name="report_issues_github">在 GitHub 里反馈问题</string>
     <string name="error_no_browser_found">没发现浏览器应用</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">没有静音媒体音量</string>

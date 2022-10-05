@@ -6,7 +6,6 @@
     <string name="app_name">Mute Reminder</string>
     <!-- MainActivity -->
     <string name="main_activity_hint">Eine Benachrichtigung wird angezeigt, wenn der Klingelton stummgeschalten ist und Medien über lokale Lautsprecher abgespielt werden würden.</string>
-    <string name="report_issues_github">Fehler auf GitHub melden</string>
     <string name="error_no_browser_found">Kein Browser gefunden</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Medien nicht stummgeschaltet</string>
