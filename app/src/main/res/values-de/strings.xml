@@ -13,5 +13,9 @@
     <string name="notification_background_title">Hintergrunddienst</string>
     <string name="notification_background_summary">Du kannst diese Benachrichtigungskategorie ausblenden</string>
     <!-- Settings -->
+    <string name="settings">Einstellungen</string>
+    <string name="general">Allgemein</string>
+    <string name="notify_only_when_muted">Nur benachrichtigen, wenn Klingelton stumm ist</string>
+    <string name="about">Über</string>
     <!-- About menu -->
 </resources>
