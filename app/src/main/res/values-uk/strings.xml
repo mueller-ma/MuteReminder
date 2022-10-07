@@ -12,5 +12,6 @@
     <string name="notification_reminder_title">Нагадування</string>
     <string name="notification_background_title">Фонова служба</string>
     <string name="notification_background_summary">Можете сховати цю категорію сповіщень</string>
+    <!-- Settings -->
     <!-- About menu -->
 </resources>

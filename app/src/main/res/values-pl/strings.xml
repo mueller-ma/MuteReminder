@@ -11,7 +11,10 @@
     <string name="notification_reminder_title">Przypomnienie</string>
     <string name="notification_background_title">Usługa w tle</string>
     <string name="notification_background_summary">Możesz ukryć tę kategorię powiadomień</string>
+    <!-- Settings -->
     <string name="settings">Ustawienia</string>
+    <string name="general">Ogólne</string>
+    <string name="notify_only_when_muted">Powiadamiaj tylko, gdy dzwonek jest wyciszony</string>
     <string name="about">Informacje</string>
     <!-- About menu -->
 </resources>

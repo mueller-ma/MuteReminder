@@ -12,5 +12,6 @@
     <string name="notification_reminder_title">Hatırlatıcı</string>
     <string name="notification_background_title">Arka plan hizmeti</string>
     <string name="notification_background_summary">Bu bildirim kategorisini gizleyebilirsiniz</string>
+    <!-- Settings -->
     <!-- About menu -->
 </resources>
