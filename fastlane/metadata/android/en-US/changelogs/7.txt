@@ -1,0 +1,3 @@
+* Add settings
+* Redesign app
+* Support Android 13
