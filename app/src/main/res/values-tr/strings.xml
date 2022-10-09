@@ -13,5 +13,9 @@
     <string name="notification_background_title">Arka plan hizmeti</string>
     <string name="notification_background_summary">Bu bildirim kategorisini gizleyebilirsiniz</string>
     <!-- Settings -->
+    <string name="settings">Ayarlar</string>
+    <string name="general">Genel</string>
+    <string name="notify_only_when_muted">Yalnızca zil sesi kapatıldığında bildir</string>
+    <string name="about">Hakkında</string>
     <!-- About menu -->
 </resources>
