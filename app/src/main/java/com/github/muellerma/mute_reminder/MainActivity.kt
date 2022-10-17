@@ -28,20 +28,18 @@ class MainActivity : AppCompatActivity() {
         checkNotificationPermissionState()
     }
 
+    override fun onResume() {
+        super.onResume()
+        handleNotificationPermission(hasNotificationPermission())
+    }
+
     private fun setupListeners() = with(binding) {
         settings.setOnClickListener {
             Intent(this@MainActivity, PreferenceActivity::class.java).apply {
                 startActivity(this)
             }
         }
-        notificationButton.setOnClickListener {
-            openNotificationSettings()
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        handleNotificationPermission(hasNotificationPermission())
+        notificationButton.setOnClickListener { openNotificationSettings() }
     }
 
     private fun checkNotificationPermissionState() {
