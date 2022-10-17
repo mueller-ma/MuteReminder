@@ -16,6 +16,7 @@
     <string name="notification_reminder_title">Reminder</string>
     <string name="notification_background_title">Background service</string>
     <string name="notification_background_summary">You can hide this notification category</string>
+    <string name="notification_permission_button">Give Notification Permission</string>
 
     <!-- Settings -->
     <string name="settings">Settings</string>
