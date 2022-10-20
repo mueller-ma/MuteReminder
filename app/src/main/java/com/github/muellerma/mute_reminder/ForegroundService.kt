@@ -64,7 +64,7 @@ class ForegroundService : Service() {
                 .setOngoing(true)
                 .setShowWhen(true)
                 .setWhen(System.currentTimeMillis())
-                .setColor(ContextCompat.getColor(applicationContext, R.color.purple_500))
+                .setColor(ContextCompat.getColor(applicationContext, R.color.md_theme_light_primary))
                 .setCategory(NotificationCompat.CATEGORY_SERVICE)
 
             nm.notify(NOTIFICATION_ALERT_ID, notificationBuilder.build())
@@ -146,7 +146,7 @@ class ForegroundService : Service() {
             setShowBadge(true)
             enableVibration(false)
             enableLights(true)
-            lightColor = ContextCompat.getColor(this@ForegroundService, R.color.purple_500)
+            lightColor = ContextCompat.getColor(this@ForegroundService, R.color.md_theme_light_primary)
             setSound(null, null)
             nm.createNotificationChannel(this)
         }
