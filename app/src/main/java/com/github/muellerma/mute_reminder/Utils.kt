@@ -31,10 +31,3 @@ fun Context.hasPermission(string: String): Boolean {
         string
     ) == PackageManager.PERMISSION_GRANTED
 }
-
-fun Context.hasNotificationPermission(): Boolean {
-    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
-        return true
-    }
-    return hasPermission(android.Manifest.permission.POST_NOTIFICATIONS)
-}
