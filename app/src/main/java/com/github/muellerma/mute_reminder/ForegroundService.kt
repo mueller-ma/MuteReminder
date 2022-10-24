@@ -54,24 +54,38 @@ class ForegroundService : Service() {
 
     private fun handleVolumeChanged() {
         val nm = getSystemService<NotificationManager>()!!
-        if (mediaAudioManager.shouldNotify()) {
-            Log.d(TAG, "Show notification")
+        val shouldNotify = mediaAudioManager.shouldNotify()
+        when {
+            shouldNotify && isNotificationShown(nm) -> {
+                Log.d(TAG, "Should notify, notification is already shown")
+            }
+            shouldNotify -> {
+                Log.d(TAG, "Should notify, show notification")
 
-            val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ALERT_ID)
-                .setContentTitle(getString(R.string.notification_reminder_text))
-                .setTicker(getString(R.string.notification_reminder_text))
-                .setSmallIcon(R.drawable.ic_baseline_volume_up_24)
-                .setOngoing(true)
-                .setShowWhen(true)
-                .setWhen(System.currentTimeMillis())
-                .setColor(ContextCompat.getColor(applicationContext, R.color.md_theme_light_primary))
-                .setCategory(NotificationCompat.CATEGORY_SERVICE)
+                val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ALERT_ID)
+                    .setContentTitle(getString(R.string.notification_reminder_text))
+                    .setTicker(getString(R.string.notification_reminder_text))
+                    .setSmallIcon(R.drawable.ic_baseline_volume_up_24)
+                    .setOngoing(true)
+                    .setShowWhen(true)
+                    .setWhen(System.currentTimeMillis())
+                    .setColor(ContextCompat.getColor(applicationContext, R.color.md_theme_light_primary))
+                    .setCategory(NotificationCompat.CATEGORY_SERVICE)
 
-            nm.notify(NOTIFICATION_ALERT_ID, notificationBuilder.build())
-        } else {
-            Log.d(TAG, "Hide notification")
-            nm.cancel(NOTIFICATION_ALERT_ID)
+                nm.notify(NOTIFICATION_ALERT_ID, notificationBuilder.build())
+            }
+            else -> {
+                Log.d(TAG, "Should not notify, hide notification")
+                nm.cancel(NOTIFICATION_ALERT_ID)
+            }
         }
+    }
+
+    private fun isNotificationShown(nm: NotificationManager): Boolean {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            return false
+        }
+        return nm.activeNotifications.any { it.id == NOTIFICATION_ALERT_ID }
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
