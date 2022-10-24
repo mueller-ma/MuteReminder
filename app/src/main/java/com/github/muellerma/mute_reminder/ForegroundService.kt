@@ -13,7 +13,10 @@ import android.os.Handler
 import android.os.IBinder
 import android.os.Looper
 import android.provider.Settings
+import android.telephony.TelephonyCallback
+import android.telephony.TelephonyManager
 import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
@@ -47,12 +50,20 @@ class ForegroundService : Service() {
             handleVolumeChanged()
         }
     }
+    private val callListener = @RequiresApi(Build.VERSION_CODES.S) object :
+        TelephonyCallback(), TelephonyCallback.CallStateListener
+    {
+        override fun onCallStateChanged(state: Int) {
+            handleVolumeChanged()
+        }
+    }
 
     private val prefsListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
         if (key == Prefs.NOTIFY_ONLY_WHEN_MUTED) handleVolumeChanged()
     }
 
     private fun handleVolumeChanged() {
+        Log.d(TAG, "handleVolumeChanged()")
         val nm = getSystemService<NotificationManager>()!!
         val shouldNotify = mediaAudioManager.shouldNotify()
         when {
@@ -101,6 +112,13 @@ class ForegroundService : Service() {
             true,
             volumeObserver
         )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S &&
+            applicationContext.hasPermission(android.Manifest.permission.READ_PHONE_STATE)
+        ) {
+            Log.d(TAG, "Start TelephonyManager listener")
+            val telephonyManager = getSystemService<TelephonyManager>()
+            telephonyManager?.registerTelephonyCallback(mainExecutor, callListener)
+        }
 
         val intentFilter = IntentFilter().apply {
             addAction(AudioManager.ACTION_AUDIO_BECOMING_NOISY)
@@ -189,6 +207,10 @@ class ForegroundService : Service() {
         applicationContext.contentResolver.unregisterContentObserver(volumeObserver)
         prefs.sharedPrefs.unregisterOnSharedPreferenceChangeListener(prefsListener)
         unregisterReceiver(muteListener)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val telephonyManager = getSystemService<TelephonyManager>()
+            telephonyManager?.unregisterTelephonyCallback(callListener)
+        }
     }
 
     companion object {
