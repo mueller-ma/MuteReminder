@@ -95,10 +95,8 @@ class ForegroundService : Service() {
             addAction(BluetoothDevice.ACTION_ACL_CONNECTED)
             addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED)
             addAction(BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                addAction(AudioManager.ACTION_HDMI_AUDIO_PLUG)
-                addAction(AudioManager.ACTION_HEADSET_PLUG)
-            }
+            addAction(AudioManager.ACTION_HDMI_AUDIO_PLUG)
+            addAction(AudioManager.ACTION_HEADSET_PLUG)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 addAction(NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED)
             }
