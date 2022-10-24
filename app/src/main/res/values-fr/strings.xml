@@ -5,7 +5,6 @@
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Rappel de silencieux</string>
     <!-- MainActivity -->
-    <string name="main_activity_hint">Une notification s\'affiche si la sonnerie du téléphone est mise en sourdine mais que les médias ne le sont pas, et que le média serait lu sur le haut-parleur du téléphone.</string>
     <string name="error_no_browser_found">Aucun navigateur trouvé</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Média non mis en sourdine</string>
