@@ -54,5 +54,18 @@
             android:layout_marginEnd="16dp"
             android:text="@string/settings"
             android:textColor="?colorOnBackground" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/notification_permissions"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/notification_permission_button"
+            android:textColor="?colorOnBackground" />
     </LinearLayout>
 </ScrollView>
