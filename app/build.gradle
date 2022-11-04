@@ -41,7 +41,10 @@ android {
         viewBinding true
     }
     lint {
-        abortOnError false
+        abortOnError true
+        ignoreWarnings false
+        warningsAsErrors true
+        showAll true
     }
 
     namespace 'com.github.muellerma.mute_reminder'
