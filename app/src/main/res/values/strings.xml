@@ -25,7 +25,7 @@
     <string name="about">About</string>
 
     <!-- About menu -->
-    <string name="aboutLibraries_description_special1_name" translatable="false">GitHub</string>
-    <string name="aboutLibraries_description_special2_name" translatable="false">F-Droid</string>
-    <string name="aboutLibraries_description_special3_name" translatable="false">Crowdin</string>
+    <string name="aboutLibraries_description_special1_name" translatable="false" tools:ignore="UnusedResources">GitHub</string>
+    <string name="aboutLibraries_description_special2_name" translatable="false" tools:ignore="UnusedResources">F-Droid</string>
+    <string name="aboutLibraries_description_special3_name" translatable="false" tools:ignore="UnusedResources">Crowdin</string>
 </resources>
