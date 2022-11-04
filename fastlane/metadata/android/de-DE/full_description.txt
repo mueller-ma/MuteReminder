@@ -1,1 +1,1 @@
-Eine Benachrichtigung wird angezeigt, wenn der Klingelton stummgeschalten ist und Medien über lokale Lautsprecher abgespielt werden würden.
+Eine Benachrichtigung wird angezeigt, wenn der Klingelton stummgeschaltet ist und Medien über lokale Lautsprecher abgespielt werden würden.
