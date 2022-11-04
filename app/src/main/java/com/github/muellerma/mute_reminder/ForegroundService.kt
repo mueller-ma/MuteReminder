@@ -16,7 +16,6 @@ import android.provider.Settings
 import android.telephony.TelephonyCallback
 import android.telephony.TelephonyManager
 import android.util.Log
-import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
@@ -50,12 +49,15 @@ class ForegroundService : Service() {
             handleVolumeChanged()
         }
     }
-    private val callListener = @RequiresApi(Build.VERSION_CODES.S) object :
-        TelephonyCallback(), TelephonyCallback.CallStateListener
-    {
-        override fun onCallStateChanged(state: Int) {
-            handleVolumeChanged()
+    private val callListener = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        object : TelephonyCallback(), TelephonyCallback.CallStateListener
+        {
+            override fun onCallStateChanged(state: Int) {
+                handleVolumeChanged()
+            }
         }
+    } else {
+        null
     }
 
     private val prefsListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
@@ -117,7 +119,7 @@ class ForegroundService : Service() {
         ) {
             Log.d(TAG, "Start TelephonyManager listener")
             val telephonyManager = getSystemService<TelephonyManager>()
-            telephonyManager?.registerTelephonyCallback(mainExecutor, callListener)
+            callListener?.let { telephonyManager?.registerTelephonyCallback(mainExecutor, it) }
         }
 
         val intentFilter = IntentFilter().apply {
@@ -209,7 +211,7 @@ class ForegroundService : Service() {
         unregisterReceiver(muteListener)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             val telephonyManager = getSystemService<TelephonyManager>()
-            telephonyManager?.unregisterTelephonyCallback(callListener)
+            callListener?.let { telephonyManager?.unregisterTelephonyCallback(it) }
         }
     }
 
