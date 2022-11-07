@@ -3,8 +3,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Mute reminder</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Уведомление отображается, если звук выключен, но медиа не и медиа будут воспроизводиться на локальных динамиках. Вы можете изменить это поведение в настройках.</string>
     <!-- Notifications -->
     <!-- Settings -->
+    <string name="settings">Settings</string>
     <!-- About menu -->
 </resources>
