@@ -11,9 +11,11 @@
     <string name="main_activity_hint">A notification is shown if ringtone is muted, but media isn\'t and media would be played over local speakers. You can change this behavior in the settings.</string>
     <string name="error_no_browser_found">No browser found</string>
     <string name="notification_permission_button">Grant permission to show notifications</string>
-
+    <string name="mute_media">Mute media volume</string>
+    <string name="mute_media_failed">Failed to mute volume</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Media not muted</string>
+    <string name="notification_reminder_action">Tap to mute media volume</string>
     <string name="notification_reminder_title">Reminder</string>
     <string name="notification_background_title">Background service</string>
     <string name="notification_background_summary">You can hide this notification category</string>

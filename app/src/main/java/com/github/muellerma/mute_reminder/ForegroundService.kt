@@ -1,8 +1,10 @@
 package com.github.muellerma.mute_reminder
 
 
+import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.app.Service
 import android.bluetooth.BluetoothDevice
 import android.content.*
@@ -64,6 +66,7 @@ class ForegroundService : Service() {
         if (key == Prefs.NOTIFY_ONLY_WHEN_MUTED) handleVolumeChanged()
     }
 
+    @SuppressLint("LaunchActivityFromNotification")//Notification actions are folded by default
     private fun handleVolumeChanged() {
         Log.d(TAG, "handleVolumeChanged()")
         val nm = getSystemService<NotificationManager>()!!
@@ -75,16 +78,24 @@ class ForegroundService : Service() {
             shouldNotify -> {
                 Log.d(TAG, "Should notify, show notification")
 
+                //create pendingIntent, click to send mute action
+                val intent = Intent(this, ForegroundService::class.java)
+                intent.action = "ACTION_MUTE"
+                val pendingIntent = PendingIntent.getService(this, 0, intent,
+                    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent_Immutable
+                )
+
                 val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ALERT_ID)
                     .setContentTitle(getString(R.string.notification_reminder_text))
                     .setTicker(getString(R.string.notification_reminder_text))
+                    .setContentText(getString(R.string.notification_reminder_action))
                     .setSmallIcon(R.drawable.ic_baseline_volume_up_24)
                     .setOngoing(true)
                     .setShowWhen(true)
                     .setWhen(System.currentTimeMillis())
                     .setColor(ContextCompat.getColor(applicationContext, R.color.md_theme_light_primary))
                     .setCategory(NotificationCompat.CATEGORY_SERVICE)
-
+                    .setContentIntent(pendingIntent)
                 nm.notify(NOTIFICATION_ALERT_ID, notificationBuilder.build())
             }
             else -> {
@@ -105,7 +116,11 @@ class ForegroundService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand()")
-
+        if (intent?.action == "ACTION_MUTE") {
+            //already running
+            mediaAudioManager.muteMedia()
+            return START_STICKY
+        }
         mediaAudioManager = MediaAudioManager(this)
         prefs = Prefs(this)
         // Register for volume changes
