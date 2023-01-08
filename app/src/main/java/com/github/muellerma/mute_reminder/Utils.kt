@@ -30,6 +30,7 @@ fun Context.hasPermission(string: String): Boolean {
         string
     ) == PackageManager.PERMISSION_GRANTED
 }
+
 fun Context.showToast(@StringRes msg: Int) {
     Toast
         .makeText(this, msg, Toast.LENGTH_SHORT)
