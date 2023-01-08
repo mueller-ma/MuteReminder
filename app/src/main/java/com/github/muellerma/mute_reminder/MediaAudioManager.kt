@@ -5,7 +5,6 @@ import android.media.AudioDeviceInfo
 import android.media.AudioManager
 import android.os.Build
 import android.util.Log
-import android.widget.Toast
 import androidx.core.content.getSystemService
 
 class MediaAudioManager(private val context: Context) {
@@ -21,7 +20,7 @@ class MediaAudioManager(private val context: Context) {
         }
         catch (e: SecurityException){
             // setStreamVolume may fail at don't-disturb Mode
-            Toast.makeText(context,R.string.mute_media_failed,Toast.LENGTH_SHORT).show()
+            context.showToast(R.string.mute_media_failed)
         }
     }
     private fun isMediaMuted(): Boolean {

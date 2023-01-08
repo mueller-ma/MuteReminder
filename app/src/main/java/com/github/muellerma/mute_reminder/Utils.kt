@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Build
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 
 private const val TAG = "Utils"
@@ -19,9 +20,7 @@ fun String.openInBrowser(context: Context) {
         context.startActivity(intent)
     } catch (e: ActivityNotFoundException) {
         Log.d(TAG, "Unable to open url in browser: $intent")
-        Toast
-            .makeText(context, R.string.error_no_browser_found, Toast.LENGTH_SHORT)
-            .show()
+        context.showToast(R.string.error_no_browser_found)
     }
 }
 
@@ -31,6 +30,12 @@ fun Context.hasPermission(string: String): Boolean {
         string
     ) == PackageManager.PERMISSION_GRANTED
 }
+fun Context.showToast(@StringRes msg: Int) {
+    Toast
+        .makeText(this, msg, Toast.LENGTH_SHORT)
+        .show()
+}
+
 val PendingIntent_Immutable = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
     PendingIntent.FLAG_IMMUTABLE
 } else {
