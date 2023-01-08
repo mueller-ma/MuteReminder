@@ -15,7 +15,6 @@
     <string name="mute_media_failed">Failed to mute volume</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Media not muted</string>
-    <string name="notification_reminder_action">Tap to mute media volume</string>
     <string name="notification_reminder_title">Reminder</string>
     <string name="notification_background_title">Background service</string>
     <string name="notification_background_summary">You can hide this notification category</string>
