@@ -78,7 +78,7 @@ class ForegroundService : Service() {
 
                 //create pendingIntent, click to send mute action
                 val intent = Intent(this, ForegroundService::class.java)
-                intent.action = "ACTION_MUTE"
+                intent.action = ACTION_MUTE_MEDIA
                 val pendingIntent = PendingIntent.getService(this, 0, intent,
                     PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent_Immutable
                 )
@@ -117,7 +117,7 @@ class ForegroundService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand()")
-        if (intent?.action == "ACTION_MUTE") {
+        if (intent?.action == ACTION_MUTE_MEDIA) {
             //already running
             mediaAudioManager.muteMedia()
             return START_STICKY
@@ -237,6 +237,8 @@ class ForegroundService : Service() {
         private const val NOTIFICATION_ALERT_ID = 2
         private const val NOTIFICATION_CHANNEL_SERVICE_ID = "service"
         private const val NOTIFICATION_CHANNEL_ALERT_ID = "alert"
+
+        private const val ACTION_MUTE_MEDIA = "ACTION_MUTE_MEDIA"
 
         fun changeState(context: Context, start: Boolean) {
             Log.d(TAG, "changeState($start)")
