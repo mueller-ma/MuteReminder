@@ -5,18 +5,22 @@
     <!-- Feel free to actually translate the title -->
     <string name="app_name">静音提示器</string>
     <!-- MainActivity -->
-    <string name="main_activity_hint">在检测到铃声静音了但是媒体没静音，并且没有连接无线耳机、无线音箱时弹出通知。设置里可以控制软件功能。</string>
-    <string name="error_no_browser_found">没发现浏览器应用</string>
-    <string name="notification_permission_button">给予软件显示通知的权限</string>
+    <string name="main_activity_hint">当铃声音量设置为静音、媒体音量未静音时，
+您将在媒体从本地扬声器播放时收到通知提醒。
+您可以在设置中更改此行为。</string>
+    <string name="error_no_browser_found">未找到可用的浏览器</string>
+    <string name="notification_permission_button">授予通知权限</string>
+    <string name="mute_media">静音媒体音量</string>
+    <string name="mute_media_failed">静音失败</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">没有静音媒体音量</string>
     <string name="notification_reminder_title">提示</string>
     <string name="notification_background_title">后台服务</string>
-    <string name="notification_background_summary">这条通知所属的类别是可以在设置中关闭的</string>
+    <string name="notification_background_summary">您可以隐藏此通知类别</string>
     <!-- Settings -->
     <string name="settings">设置</string>
-    <string name="general">全局</string>
-    <string name="notify_only_when_muted">只在铃声静音时弹出通知</string>
-    <string name="about">关于软件</string>
+    <string name="general">通用</string>
+    <string name="notify_only_when_muted">仅在铃声静音时弹出通知</string>
+    <string name="about">关于</string>
     <!-- About menu -->
 </resources>
