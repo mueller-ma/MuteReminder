@@ -10,7 +10,7 @@ import androidx.core.view.isVisible
 import com.github.muellerma.mute_reminder.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var mediaAudioManager: MediaAudioManager
     private lateinit var binding: ActivityMainBinding
     private val notificationPermission = registerForActivityResult(
         ActivityResultContracts.RequestPermission(),
@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+        mediaAudioManager = MediaAudioManager(this)
         setupOnClickListeners()
         checkNotificationPermissionState()
     }
@@ -38,6 +39,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
         notificationPermissions.setOnClickListener { openNotificationSettings() }
+        muteMedia.setOnClickListener {
+            mediaAudioManager.muteMedia()
+        }
     }
 
     private fun checkNotificationPermissionState() {

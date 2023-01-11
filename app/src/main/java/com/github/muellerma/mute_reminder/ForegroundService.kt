@@ -3,6 +3,7 @@ package com.github.muellerma.mute_reminder
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.app.Service
 import android.bluetooth.BluetoothDevice
 import android.content.*
@@ -75,6 +76,20 @@ class ForegroundService : Service() {
             shouldNotify -> {
                 Log.d(TAG, "Should notify, show notification")
 
+                //create pendingIntent, click to send mute action
+                val intent = Intent(this, ForegroundService::class.java)
+                intent.action = ACTION_MUTE_MEDIA
+                val pendingIntent = PendingIntent.getService(
+                    this,
+                    0,
+                    intent,
+                    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent_Immutable
+                )
+                val muteAction = NotificationCompat.Action(
+                    R.drawable.ic_baseline_volume_mute_24,
+                    getString(R.string.mute_media),
+                    pendingIntent
+                )
                 val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ALERT_ID)
                     .setContentTitle(getString(R.string.notification_reminder_text))
                     .setTicker(getString(R.string.notification_reminder_text))
@@ -84,7 +99,7 @@ class ForegroundService : Service() {
                     .setWhen(System.currentTimeMillis())
                     .setColor(ContextCompat.getColor(applicationContext, R.color.md_theme_light_primary))
                     .setCategory(NotificationCompat.CATEGORY_SERVICE)
-
+                    .addAction(muteAction)
                 nm.notify(NOTIFICATION_ALERT_ID, notificationBuilder.build())
             }
             else -> {
@@ -105,7 +120,11 @@ class ForegroundService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "onStartCommand()")
-
+        if (intent?.action == ACTION_MUTE_MEDIA) {
+            //already running
+            mediaAudioManager.muteMedia()
+            return START_STICKY
+        }
         mediaAudioManager = MediaAudioManager(this)
         prefs = Prefs(this)
         // Register for volume changes
@@ -221,6 +240,8 @@ class ForegroundService : Service() {
         private const val NOTIFICATION_ALERT_ID = 2
         private const val NOTIFICATION_CHANNEL_SERVICE_ID = "service"
         private const val NOTIFICATION_CHANNEL_ALERT_ID = "alert"
+
+        private const val ACTION_MUTE_MEDIA = "ACTION_MUTE_MEDIA"
 
         fun changeState(context: Context, start: Boolean) {
             Log.d(TAG, "changeState($start)")

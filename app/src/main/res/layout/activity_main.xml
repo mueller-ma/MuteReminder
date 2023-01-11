@@ -67,5 +67,16 @@
             android:layout_marginEnd="16dp"
             android:text="@string/notification_permission_button"
             android:textColor="?colorOnBackground" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mute_media"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/mute_media"
+            android:textColor="?colorOnBackground" />
     </LinearLayout>
 </ScrollView>

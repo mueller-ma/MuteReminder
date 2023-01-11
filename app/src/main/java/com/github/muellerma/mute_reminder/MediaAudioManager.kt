@@ -7,12 +7,21 @@ import android.os.Build
 import android.util.Log
 import androidx.core.content.getSystemService
 
-class MediaAudioManager(context: Context) {
+class MediaAudioManager(private val context: Context) {
     private val audioManager: AudioManager = context.getSystemService()!!
     private val prefs = Prefs(context)
 
     fun shouldNotify(): Boolean {
         return (!prefs.notifyOnlyWhenMuted || isRingToneMuted()) && !isMediaMuted() && !usesRemoteOutput()
+    }
+
+    fun muteMedia() {
+        try {
+            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, AudioManager.FLAG_SHOW_UI)
+        } catch (e: SecurityException) {
+            // setStreamVolume may fail at don't-disturb Mode
+            context.showToast(R.string.mute_media_failed)
+        }
     }
 
     private fun isMediaMuted(): Boolean {
