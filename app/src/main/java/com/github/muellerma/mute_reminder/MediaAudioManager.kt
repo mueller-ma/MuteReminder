@@ -14,15 +14,16 @@ class MediaAudioManager(private val context: Context) {
     fun shouldNotify(): Boolean {
         return (!prefs.notifyOnlyWhenMuted || isRingToneMuted()) && !isMediaMuted() && !usesRemoteOutput()
     }
-    fun muteMedia(){
+
+    fun muteMedia() {
         try {
-            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,0 ,AudioManager.FLAG_SHOW_UI)
-        }
-        catch (e: SecurityException){
+            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, AudioManager.FLAG_SHOW_UI)
+        } catch (e: SecurityException) {
             // setStreamVolume may fail at don't-disturb Mode
             context.showToast(R.string.mute_media_failed)
         }
     }
+
     private fun isMediaMuted(): Boolean {
         val mediaVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
         Log.d(TAG, "mediaVolume=$mediaVolume")

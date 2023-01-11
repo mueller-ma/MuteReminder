@@ -79,10 +79,13 @@ class ForegroundService : Service() {
                 //create pendingIntent, click to send mute action
                 val intent = Intent(this, ForegroundService::class.java)
                 intent.action = ACTION_MUTE_MEDIA
-                val pendingIntent = PendingIntent.getService(this, 0, intent,
+                val pendingIntent = PendingIntent.getService(
+                    this,
+                    0,
+                    intent,
                     PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent_Immutable
                 )
-                val muteAction=NotificationCompat.Action(
+                val muteAction = NotificationCompat.Action(
                     R.drawable.ic_baseline_volume_mute_24,
                     getString(R.string.mute_media),
                     pendingIntent
