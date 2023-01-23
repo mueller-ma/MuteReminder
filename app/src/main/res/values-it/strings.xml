@@ -4,6 +4,10 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <!-- MainActivity -->
+    <string name="main_activity_hint">Viene mostrata una notifica se la suoneria è disattivata mentre l\'audio è attivo e verrebbe riprodotto con gli altoparlanti locali. È possibile modificare questo comportamento nelle impostazioni.</string>
+    <string name="error_no_browser_found">Nessun browser trovato</string>
+    <string name="notification_permission_button">Concedi il permesso per mostrare le notifiche</string>
+    <string name="mute_media">Silenzia volume multimediale</string>
     <!-- Notifications -->
     <!-- Settings -->
     <!-- About menu -->
