@@ -3,12 +3,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Mute reminder</string>
     <!-- MainActivity -->
     <string name="main_activity_hint">Viene mostrata una notifica se la suoneria è disattivata mentre l\'audio è attivo e verrebbe riprodotto con gli altoparlanti locali. È possibile modificare questo comportamento nelle impostazioni.</string>
     <string name="error_no_browser_found">Nessun browser trovato</string>
     <string name="notification_permission_button">Concedi il permesso per mostrare le notifiche</string>
     <string name="mute_media">Silenzia volume multimediale</string>
+    <string name="mute_media_failed">Impossibile disattivare il volume</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Audio non silenziato</string>
+    <string name="notification_reminder_title">Promemoria</string>
+    <string name="notification_background_title">Servizio in background</string>
+    <string name="notification_background_summary">Puoi nascondere questa categoria di notifica</string>
     <!-- Settings -->
+    <string name="settings">Impostazioni</string>
+    <string name="general">Generali</string>
+    <string name="notify_only_when_muted">Notifica solo quando la suoneria è in silenzioso</string>
+    <string name="about">Informazioni</string>
     <!-- About menu -->
 </resources>
