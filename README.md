@@ -10,6 +10,14 @@ A notification is shown if ringtone is muted, but media isn't and media would be
 
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" alt="Screenshot" width=200px>
 
+## Maintenance notice
+
+From my point of view this app is feature complete. I probably won't add new major features on my own, but I will:
+* Keep dependencies up-to-date
+* Merge new translations
+* Fix bugs
+* Review and merge PRs, even for new features
+
 ## Translations
 
 App strings and the app store description can be translated via Crowdin: https://crowdin.com/project/mutereminder
