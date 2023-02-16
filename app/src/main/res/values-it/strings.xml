@@ -7,6 +7,8 @@
     <!-- MainActivity -->
     <string name="main_activity_hint">Viene mostrata una notifica se la suoneria è disattivata mentre l\'audio è attivo e verrebbe riprodotto con gli altoparlanti locali. È possibile modificare questo comportamento nelle impostazioni.</string>
     <string name="error_no_browser_found">Nessun browser trovato</string>
+    <string name="permission_button">Concedere l\'autorizzazione mancante</string>
+    <string name="permissions_hint">Mute reminder necessita queste autorizzazioni per mostrare notifiche e reagire agli eventi come cuffie bluetooth collegate</string>
     <string name="mute_media">Silenzia volume multimediale</string>
     <string name="mute_media_failed">Impossibile disattivare il volume</string>
     <!-- Notifications -->
