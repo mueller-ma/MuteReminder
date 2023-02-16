@@ -10,7 +10,8 @@
     <!-- MainActivity -->
     <string name="main_activity_hint">A notification is shown if ringtone is muted, but media isn\'t and media would be played over local speakers. You can change this behavior in the settings.</string>
     <string name="error_no_browser_found">No browser found</string>
-    <string name="notification_permission_button">Grant permission to show notifications</string>
+    <string name="permission_button">Grant missing permission</string>
+    <string name="permissions_hint">Mute reminder requires permissions to show notifications and react on events, e.g. bluetooth headset connected</string>
     <string name="mute_media">Mute media volume</string>
     <string name="mute_media_failed">Failed to mute volume</string>
     <!-- Notifications -->

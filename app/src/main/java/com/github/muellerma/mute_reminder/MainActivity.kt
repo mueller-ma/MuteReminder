@@ -3,33 +3,82 @@ package com.github.muellerma.mute_reminder
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
+import android.Manifest
+import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
+import androidx.core.view.isGone
 import com.github.muellerma.mute_reminder.databinding.ActivityMainBinding
+import com.github.muellerma.mute_reminder.databinding.BottomSheetPermissionsBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mediaAudioManager: MediaAudioManager
     private lateinit var binding: ActivityMainBinding
-    private val notificationPermission = registerForActivityResult(
-        ActivityResultContracts.RequestPermission(),
-        ::handleNotificationPermission
-    )
+    private val permissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) {
+        Log.d(TAG, "permissionLauncherCallback")
+        ForegroundService.changeState(this, true)
+        updatePermissionButton()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d(TAG, "onCreate()")
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
         mediaAudioManager = MediaAudioManager(this)
         setupOnClickListeners()
-        checkNotificationPermissionState()
+        showPermissionsDialogIfRequired()
     }
 
     override fun onResume() {
+        Log.d(TAG, "onResume()")
         super.onResume()
-        handleNotificationPermission(hasNotificationPermission())
+        updatePermissionButton()
+    }
+
+    private fun updatePermissionButton() {
+        Log.d(TAG, "checkPermissions()")
+        binding.permissions.isGone = getMissingPermissions().isEmpty()
+    }
+
+    private fun getMissingPermissions(): Array<String> {
+        val requiredPermissions = mutableListOf(
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.BLUETOOTH
+        )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            requiredPermissions.add(Manifest.permission.POST_NOTIFICATIONS)
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            requiredPermissions.add(Manifest.permission.BLUETOOTH_CONNECT)
+        }
+        return requiredPermissions
+            .filter { !hasPermission(it) }
+            .toTypedArray()
+    }
+
+    private fun showPermissionsDialogIfRequired() {
+        Log.d(TAG, "showPermissionsDialogIfRequired()")
+
+        if (getMissingPermissions().isEmpty()) {
+            Log.d(TAG, "No permissions missing, don't show dialog")
+            return
+        }
+
+        val dialog = BottomSheetDialog(this)
+        val bottomSheet = BottomSheetPermissionsBinding.inflate(layoutInflater)
+        bottomSheet.button.setOnClickListener {
+            dialog.dismiss()
+            val requestPermissions = getMissingPermissions()
+            Log.d(TAG, "Request permissions: ${requestPermissions.joinToString()}")
+            permissionLauncher.launch(requestPermissions)
+        }
+        dialog.setContentView(bottomSheet.root)
+        dialog.show()
     }
 
     private fun setupOnClickListeners() = with(binding) {
@@ -38,41 +87,15 @@ class MainActivity : AppCompatActivity() {
                 startActivity(this)
             }
         }
-        notificationPermissions.setOnClickListener { openNotificationSettings() }
+        permissions.setOnClickListener {
+            showPermissionsDialogIfRequired()
+        }
         muteMedia.setOnClickListener {
             mediaAudioManager.muteMedia()
         }
     }
 
-    private fun checkNotificationPermissionState() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
-            handleNotificationPermission(true)
-            return
-        }
-        notificationPermission.launch(android.Manifest.permission.POST_NOTIFICATIONS)
-    }
-
-    private fun handleNotificationPermission(isGranted: Boolean) {
-        binding.notificationPermissions.isVisible = !isGranted
-        if (isGranted) {
-            ForegroundService.changeState(this, true)
-        }
-    }
-
-    private fun hasNotificationPermission(): Boolean {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
-            return true
-        }
-        return hasPermission(android.Manifest.permission.POST_NOTIFICATIONS)
-    }
-
-    private fun openNotificationSettings() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
-            return
-        }
-        val settingsIntent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
-            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            .putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
-        startActivity(settingsIntent)
+    companion object {
+        private val TAG = MainActivity::class.java.simpleName
     }
 }
