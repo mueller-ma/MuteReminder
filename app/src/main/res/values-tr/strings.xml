@@ -7,7 +7,6 @@
     <!-- MainActivity -->
     <string name="main_activity_hint">Zil sesi kapatılmış ancak medya kapatılmamışsa ve medya yerel hoparlörler üzerinden çalınıyorsa bir bildirim gösterilir.</string>
     <string name="error_no_browser_found">Tarayıcı bulunamadı</string>
-    <string name="notification_permission_button">Bildirimleri göstermek için izin verin</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Medya sessize alınmamış</string>
     <string name="notification_reminder_title">Hatırlatıcı</string>
