@@ -7,7 +7,6 @@
     <!-- MainActivity -->
     <string name="main_activity_hint">Eine Benachrichtigung wird angezeigt, wenn der Klingelton stummgeschaltet ist und Medien über lokale Lautsprecher abgespielt werden würden. Du kannst dieses Verhalten in den Einstellungen ändern.</string>
     <string name="error_no_browser_found">Kein Browser gefunden</string>
-    <string name="notification_permission_button">Berechtigung zum Anzeigen von Benachrichtigungen gewähren</string>
     <string name="mute_media">Medien stumm schalten</string>
     <string name="mute_media_failed">Fehler beim Stummschalten</string>
     <!-- Notifications -->
