@@ -9,6 +9,8 @@
 您将在媒体从本地扬声器播放时收到通知提醒。
 您可以在设置中更改此行为。</string>
     <string name="error_no_browser_found">未找到可用的浏览器</string>
+    <string name="permission_button">授予缺少的权限</string>
+    <string name="permissions_hint">静音提醒需要显示通知和对事件作出反应的权限，例如蓝牙耳机已连接</string>
     <string name="mute_media">静音媒体音量</string>
     <string name="mute_media_failed">静音失败</string>
     <!-- Notifications -->
