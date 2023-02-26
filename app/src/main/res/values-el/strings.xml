@@ -3,8 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Σίγαση υπενθύμισης</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Εμφανίζεται μια ειδοποίηση αν ο ήχος κλήσης είναι σε σίγαση, αλλά τα πολυμέσα δεν είναι και τα πολυμέσα θα αναπαράγονται μέσω τοπικών ομιλητών. Μπορείτε να αλλάξετε αυτή τη συμπεριφορά στις ρυθμίσεις.</string>
+    <string name="error_no_browser_found">Δεν βρέθηκε πρόγραμμα περιήγησης</string>
+    <string name="permission_button">Χορήγηση δικαιωμάτων που λείπουν</string>
+    <string name="permissions_hint">Η σίγαση υπενθύμισης απαιτεί δικαιώματα για εμφάνιση ειδοποιήσεων και αντίδραση σε συμβάντα, π.χ. συνδεδεμένα ακουστικά bluetooth</string>
+    <string name="mute_media">Σίγαση έντασης πολυμέσων</string>
+    <string name="mute_media_failed">Αποτυχία σίγασης έντασης</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Μη σίγαση πολυμέσων</string>
+    <string name="notification_reminder_title">Υπενθύμιση</string>
+    <string name="notification_background_title">Υπηρεσία παρασκηνίου</string>
+    <string name="notification_background_summary">Μπορείτε να αποκρύψετε αυτή την κατηγορία ειδοποιήσεων</string>
     <!-- Settings -->
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="general">Γενικά</string>
+    <string name="notify_only_when_muted">Ειδοποίηση μόνο όταν ο ήχος κλήσης είναι σε σίγαση</string>
+    <string name="about">Σχετικά</string>
     <!-- About menu -->
 </resources>
