@@ -3,8 +3,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Wycisz przypomnienie</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Powiadomienie jest wyświetlane, jeśli dzwonek jest wyciszony, ale media nie są i media będą odtwarzane przez lokalne głośniki. Możesz zmienić to zachowanie w ustawieniach.</string>
     <string name="error_no_browser_found">Nie znaleziono przeglądarki</string>
+    <string name="permission_button">Udziel brakujących uprawnień</string>
+    <string name="permissions_hint">Wyciszenie przypomnienia wymaga uprawnień do wyświetlania powiadomień i reagowania na wydarzenia, np. podłączony zestaw słuchawkowy bluetooth</string>
+    <string name="mute_media">Wycisz głośność multimediów</string>
+    <string name="mute_media_failed">Wyciszenie głośności nie powiodło się</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Multimedia nie wyciszone</string>
     <string name="notification_reminder_title">Przypomnienie</string>
