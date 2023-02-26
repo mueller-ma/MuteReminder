@@ -3,8 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Ztlumit připomenutí</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Upozornění se zobrazí pokud je vyzvánění ztlumeno, ale média nejsou a média budou přehrána přes místní reproduktory. Toto chování můžete změnit v nastavení.</string>
+    <string name="error_no_browser_found">Nebyl nalezen žádný prohlížeč</string>
+    <string name="permission_button">Udělit chybějící oprávnění</string>
+    <string name="permissions_hint">Ztlumit připomenutí vyžaduje oprávnění k zobrazování oznámení a reakci na události, např. připojená Bluetooth sluchátka</string>
+    <string name="mute_media">Ztlumit hlasitost médií</string>
+    <string name="mute_media_failed">Nepodařilo se ztlumit hlasitost</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Média nejsou ztlumena</string>
+    <string name="notification_reminder_title">Připomenutí</string>
+    <string name="notification_background_title">Služba na pozadí</string>
+    <string name="notification_background_summary">Tuto kategorii oznámení můžete skrýt</string>
     <!-- Settings -->
+    <string name="settings">Nastavení</string>
+    <string name="general">Obecná ustanovení</string>
+    <string name="notify_only_when_muted">Upozornit pouze při ztlumeném vyzvánění</string>
+    <string name="about">O aplikaci</string>
     <!-- About menu -->
 </resources>
