@@ -3,8 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Mykistä muistutus</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Ilmoitus näytetään, jos soittoääni on mykistetty, mutta mediaa ei ja mediaa soitettaisiin paikallisissa puhujissa. Voit muuttaa tätä käyttäytymistä asetuksissa.</string>
+    <string name="error_no_browser_found">Selainta ei löytynyt</string>
+    <string name="permission_button">Myönnä puuttuva lupa</string>
+    <string name="permissions_hint">Mykistä muistutus vaatii käyttöoikeudet ilmoitusten näyttämiseen ja tapahtumiin reagointiin, esim. Bluetooth-kuulokkeet yhdistetty</string>
+    <string name="mute_media">Mykistä median äänenvoimakkuus</string>
+    <string name="mute_media_failed">Äänenvoimakkuuden mykistäminen epäonnistui</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Mediaa ei mykistetty</string>
+    <string name="notification_reminder_title">Muistutus</string>
+    <string name="notification_background_title">Taustan palvelu</string>
+    <string name="notification_background_summary">Voit piilottaa tämän ilmoituskategorian</string>
     <!-- Settings -->
+    <string name="settings">Asetukset</string>
+    <string name="general">Yleiset</string>
+    <string name="notify_only_when_muted">Ilmoita vain kun soittoääni on mykistetty</string>
+    <string name="about">Tietoja</string>
     <!-- About menu -->
 </resources>

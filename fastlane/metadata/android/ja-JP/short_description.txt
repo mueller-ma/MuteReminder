@@ -1,1 +1,1 @@
-Remind you to mute media
+メディアをミュートするよう通知します

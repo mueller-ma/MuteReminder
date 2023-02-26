@@ -3,8 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Notificatie dempen</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Er wordt een melding getoond als beltoon is gedempt, maar media is niet en media zouden worden afgespeeld over lokale sprekers. U kunt dit gedrag wijzigen in de instellingen.</string>
+    <string name="error_no_browser_found">Geen browser gevonden</string>
+    <string name="permission_button">Ontbrekende toestemming verlenen</string>
+    <string name="permissions_hint">Dempen herinnering vereist machtigingen om meldingen te tonen en te reageren op gebeurtenissen, bijvoorbeeld bluetooth headset verbonden</string>
+    <string name="mute_media">Mediavolume uitschakelen</string>
+    <string name="mute_media_failed">Kan volume niet dempen</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Media niet gedempt</string>
+    <string name="notification_reminder_title">Herinnering</string>
+    <string name="notification_background_title">Achtergrond service</string>
+    <string name="notification_background_summary">U kunt deze meldingscategorie verbergen</string>
     <!-- Settings -->
+    <string name="settings">Instellingen</string>
+    <string name="general">Algemeen</string>
+    <string name="notify_only_when_muted">Waarschuw alleen wanneer beltoon is gedempt</string>
+    <string name="about">Informatie</string>
     <!-- About menu -->
 </resources>

@@ -4,7 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <!-- MainActivity -->
+    <string name="error_no_browser_found">No s\'ha trobat cap navegador</string>
     <!-- Notifications -->
     <!-- Settings -->
+    <string name="settings">Configuració</string>
     <!-- About menu -->
 </resources>

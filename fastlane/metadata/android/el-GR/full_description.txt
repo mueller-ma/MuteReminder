@@ -1,1 +1,1 @@
-A notification is shown if ringtone is muted, but media isn't and media would be played over local speakers.
+Εμφανίζεται μια ειδοποίηση αν ο ήχος κλήσης είναι σε σίγαση, αλλά τα πολυμέσα δεν είναι και τα πολυμέσα θα αναπαράγονται μέσω τοπικών ομιλητών.

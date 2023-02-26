@@ -3,8 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Memento mut mut</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">O notificare este afișată dacă tonul de apel este dezactivat, dar mass-media nu este și mass-media va fi redată peste difuzoarele locale. Puteți schimba acest comportament în setări.</string>
+    <string name="error_no_browser_found">Nici un browser găsit</string>
+    <string name="permission_button">Acordă permisiunea lipsă</string>
+    <string name="permissions_hint">Memento-ul mute necesită permisiuni pentru a afișa notificări și a reacționa la evenimente, de ex. set căști bluetooth conectat</string>
+    <string name="mute_media">Dezactivează volumul media</string>
+    <string name="mute_media_failed">Esuare mut volum</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Media nu este dezactivată</string>
+    <string name="notification_reminder_title">Memento</string>
+    <string name="notification_background_title">Serviciu de fundal</string>
+    <string name="notification_background_summary">Puteți ascunde această categorie de notificări</string>
     <!-- Settings -->
+    <string name="settings">Setări</string>
+    <string name="general">Generalități</string>
+    <string name="notify_only_when_muted">Notifică numai când sunetul de sunet este dezactivat</string>
+    <string name="about">Despre</string>
     <!-- About menu -->
 </resources>

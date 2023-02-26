@@ -4,7 +4,9 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <!-- MainActivity -->
+    <string name="error_no_browser_found">Nem található böngésző</string>
     <!-- Notifications -->
     <!-- Settings -->
+    <string name="settings">Beállítások</string>
     <!-- About menu -->
 </resources>
