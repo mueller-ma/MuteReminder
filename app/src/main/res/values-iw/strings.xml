@@ -4,7 +4,10 @@
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
     <!-- MainActivity -->
+    <string name="error_no_browser_found">לא נמצא דפדפן</string>
     <!-- Notifications -->
     <!-- Settings -->
+    <string name="settings">הגדרות</string>
+    <string name="general">כללי</string>
     <!-- About menu -->
 </resources>
