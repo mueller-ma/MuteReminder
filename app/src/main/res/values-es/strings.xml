@@ -3,8 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Recordatorio de silencio</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Se muestra una notificación si el tono de llamada está silenciado, pero los medios no y los medios se reproducirían sobre los altavoces locales. Puede cambiar este comportamiento en la configuración.</string>
+    <string name="error_no_browser_found">No se encontró ningún navegador</string>
+    <string name="permission_button">Otorgar permiso perdido</string>
+    <string name="permissions_hint">Recordatorio de silencio requiere permisos para mostrar notificaciones y reaccionar en eventos, por ejemplo, auriculares bluetooth conectados</string>
+    <string name="mute_media">Silenciar volumen multimedia</string>
+    <string name="mute_media_failed">Error al silenciar el volumen</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Medios no silenciados</string>
+    <string name="notification_reminder_title">Recordatorio</string>
+    <string name="notification_background_title">Servicio de fondo</string>
+    <string name="notification_background_summary">Puede ocultar esta categoría de notificación</string>
     <!-- Settings -->
+    <string name="settings">Ajustes</string>
+    <string name="general">General</string>
+    <string name="notify_only_when_muted">Notificar solo cuando el tono de llamada está silenciado</string>
+    <string name="about">Acerca de</string>
     <!-- About menu -->
 </resources>
