@@ -1,1 +1,1 @@
-A notification is shown if ringtone is muted, but media isn't and media would be played over local speakers.
+Уведомление отображается, если звук выключен, но медиа не и медиа будут воспроизводиться на локальных динамиках.
