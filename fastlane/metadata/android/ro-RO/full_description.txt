@@ -1,1 +1,1 @@
-A notification is shown if ringtone is muted, but media isn't and media would be played over local speakers.
+O notificare este afișată dacă tonul de apel este dezactivat, dar mass-media nu este și mass-media va fi redată peste difuzoarele locale.
