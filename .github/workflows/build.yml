@@ -18,8 +18,5 @@ jobs:
       - name: Validate Gradle Wrapper
         uses: gradle/wrapper-validation-action@v1.0.6
 
-      - name: Lint
-        run: bash gradlew lint
-
       - name: Build
         run: bash gradlew build
