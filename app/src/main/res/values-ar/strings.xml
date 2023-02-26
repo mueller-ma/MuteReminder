@@ -3,8 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">كتم تذكير</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">يتم إظهار إشعار إذا تم كتم نغمة الرنين ، ولكن الوسائط غير موجودة والوسائط سيتم تشغيلها على المتحدثين المحليين. يمكنك تغيير هذا السلوك في الإعدادات.</string>
+    <string name="error_no_browser_found">لم يتم العثور على متصفح</string>
+    <string name="permission_button">منح الإذن مفقود</string>
+    <string name="permissions_hint">كتم التذكير يتطلب أذونات لإظهار الإشعارات والتفاعل على الأحداث، مثل سماعة البلوتوث المتصلة</string>
+    <string name="mute_media">كتم صوت الوسائط</string>
+    <string name="mute_media_failed">فشل في كتم الصوت</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">لم يتم كتم الوسائط</string>
+    <string name="notification_reminder_title">تذكير</string>
+    <string name="notification_background_title">خدمة الخلفية</string>
+    <string name="notification_background_summary">يمكنك إخفاء فئة الإشعارات هذه</string>
     <!-- Settings -->
+    <string name="settings">الإعدادات</string>
+    <string name="general">عام</string>
+    <string name="notify_only_when_muted">إعلام فقط عندما يتم كتم نغمة الرنين</string>
+    <string name="about">حول</string>
     <!-- About menu -->
 </resources>
