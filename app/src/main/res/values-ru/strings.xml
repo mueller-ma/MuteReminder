@@ -3,9 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Отключить напоминание</string>
     <!-- MainActivity -->
     <string name="main_activity_hint">Уведомление отображается, если звук выключен, но медиа не и медиа будут воспроизводиться на локальных динамиках. Вы можете изменить это поведение в настройках.</string>
+    <string name="error_no_browser_found">Браузер не найден</string>
+    <string name="permission_button">Не хватает разрешения</string>
+    <string name="permissions_hint">Отключить напоминание требует разрешения для отображения уведомлений и реагирования на события, например Bluetooth гарнитуры подключены</string>
+    <string name="mute_media">Отключить звук мультимедиа</string>
+    <string name="mute_media_failed">Не удалось отключить звук</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Медиафайл не заглушен</string>
+    <string name="notification_reminder_title">Напоминание</string>
+    <string name="notification_background_title">Справочная служба</string>
+    <string name="notification_background_summary">Вы можете скрыть эту категорию уведомлений</string>
     <!-- Settings -->
+    <string name="settings">Настройки</string>
+    <string name="general">Общие</string>
+    <string name="notify_only_when_muted">Уведомлять только при отключении звука</string>
+    <string name="about">О нас</string>
     <!-- About menu -->
 </resources>
