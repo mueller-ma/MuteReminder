@@ -3,8 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Lydløs påmindelse</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">En meddelelse vises, hvis ringetone er muted, men medier er ikke, og medier vil blive spillet over lokale højttalere. Du kan ændre denne adfærd i indstillingerne.</string>
+    <string name="error_no_browser_found">Ingen browser fundet</string>
+    <string name="permission_button">Tildel manglende tilladelse</string>
+    <string name="permissions_hint">Lydløs påmindelse kræver tilladelser til at vise notifikationer og reagere på begivenheder, f.eks. bluetooth headset tilsluttet</string>
+    <string name="mute_media">Lydløs medielydstyrke</string>
+    <string name="mute_media_failed">Lydstyrken kunne ikke slås fra</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Medier ikke dæmpet</string>
+    <string name="notification_reminder_title">Påmindelse</string>
+    <string name="notification_background_title">Baggrunds tjeneste</string>
+    <string name="notification_background_summary">Du kan skjule denne notifikationskategori</string>
     <!-- Settings -->
+    <string name="settings">Indstillinger</string>
+    <string name="general">Generelt</string>
+    <string name="notify_only_when_muted">Giv kun besked, når ringetone er slået fra</string>
+    <string name="about">Om</string>
     <!-- About menu -->
 </resources>
