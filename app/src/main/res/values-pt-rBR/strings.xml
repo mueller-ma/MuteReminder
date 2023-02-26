@@ -3,8 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Silenciar lembrete</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Uma notificação é exibida se o toque for silenciado, mas os meios de comunicação não e os meios de comunicação serão reproduzidos pelos alto-falantes locais. Você pode alterar esse comportamento nas configurações.</string>
+    <string name="error_no_browser_found">Nenhum navegador encontrado</string>
+    <string name="permission_button">Conceder permissão faltando</string>
+    <string name="permissions_hint">Silenciar lembrete requer permissões para mostrar notificações e reagir em eventos, por exemplo, fone de ouvido bluetooth conectado</string>
+    <string name="mute_media">Silenciar volume de mídia</string>
+    <string name="mute_media_failed">Falha ao silenciar o volume</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Mídia não silenciada</string>
+    <string name="notification_reminder_title">Lembrete</string>
+    <string name="notification_background_title">Serviço de fundo</string>
+    <string name="notification_background_summary">Você pode ocultar esta categoria de notificação</string>
     <!-- Settings -->
+    <string name="settings">Configurações</string>
+    <string name="general">Gerar</string>
+    <string name="notify_only_when_muted">Notificar apenas quando o toque de toque for silenciado</string>
+    <string name="about">&amp;Sobre</string>
     <!-- About menu -->
 </resources>
