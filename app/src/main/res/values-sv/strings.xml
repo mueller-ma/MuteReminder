@@ -3,8 +3,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Tysta påminnelse</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">En avisering visas om ringsignalen är dämpad, men media är inte och media skulle spelas över lokala talare. Du kan ändra detta beteende i inställningarna.</string>
+    <string name="error_no_browser_found">Ingen webbläsare hittades</string>
+    <string name="permission_button">Bevilja saknad behörighet</string>
+    <string name="permissions_hint">Tysta påminnelse kräver behörigheter för att visa aviseringar och reagera på händelser, t.ex. Bluetooth-headset ansluten</string>
+    <string name="mute_media">Tysta media-volym</string>
+    <string name="mute_media_failed">Det gick inte att tysta volymen</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Media är inte tystad</string>
+    <string name="notification_reminder_title">Påminnelse</string>
+    <string name="notification_background_title">Bakgrundstjänsten</string>
+    <string name="notification_background_summary">Du kan dölja denna aviseringskategori</string>
     <!-- Settings -->
+    <string name="settings">Inställningar</string>
+    <string name="general">Allmänt</string>
+    <string name="notify_only_when_muted">Notifiera endast när ringsignalen är tystad</string>
+    <string name="about">Om</string>
     <!-- About menu -->
 </resources>
