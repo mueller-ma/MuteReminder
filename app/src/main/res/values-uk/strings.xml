@@ -5,12 +5,21 @@
     <!-- Feel free to actually translate the title -->
     <string name="app_name">Цить</string>
     <!-- MainActivity -->
+    <string name="main_activity_hint">Сповіщення показує, якщо звук буде приглушений, але медіа та медіа не відтворюватимуться над місцевими доповідачами. Ти можеш змінити таку поведінку в налаштуваннях.</string>
     <string name="error_no_browser_found">Вебпереглядача не знайдено</string>
+    <string name="permission_button">Надати відсутні дозволи</string>
+    <string name="permissions_hint">Для звукового нагадування потрібні дозволи на відображення сповіщень і реагування на події, наприклад, підключена гарнітура bluetooth</string>
+    <string name="mute_media">Вимкнути звук мультимедіа</string>
+    <string name="mute_media_failed">Не вдалося вимкнути гучність</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Мультимедіа не заглушено</string>
     <string name="notification_reminder_title">Нагадування</string>
     <string name="notification_background_title">Фонова служба</string>
     <string name="notification_background_summary">Можете сховати цю категорію сповіщень</string>
     <!-- Settings -->
+    <string name="settings">Налаштування</string>
+    <string name="general">Основне</string>
+    <string name="notify_only_when_muted">Сповіщати лише коли звук дзвінка вимкнено</string>
+    <string name="about">Про програму</string>
     <!-- About menu -->
 </resources>
