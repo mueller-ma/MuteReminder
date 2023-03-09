@@ -3,12 +3,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
-    <string name="app_name">通知をミュートする</string>
+    <string name="app_name">Mute reminder</string>
     <!-- MainActivity -->
-    <string name="main_activity_hint">着信音がミュートされている場合に通知が表示されますが、メディアはミュートされず、ローカルスピーカー上でメディアが再生されます。 この動作は、設定で変更できます。</string>
+    <string name="main_activity_hint">着信音がミュートされているが、メディア音量がミュートされていない場合に通知を表示します。 この動作は、設定で変更できます。</string>
     <string name="error_no_browser_found">ブラウザが見つかりませんでした</string>
-    <string name="permission_button">権限がないことを許可</string>
-    <string name="permissions_hint">通知を表示したりイベントに反応したりするには、通知の許可が必要です。例えば、Bluetooth ヘッドセットが接続されています。</string>
+    <string name="permission_button">不足している権限を許可</string>
+    <string name="permissions_hint">通知を表示したりイベントに反応したりするには、許可が必要です。例えば、Bluetoothヘッドセットが接続された際のイベントなどです。</string>
     <string name="mute_media">メディア音量をミュート</string>
     <string name="mute_media_failed">ボリュームのミュートに失敗しました</string>
     <!-- Notifications -->
