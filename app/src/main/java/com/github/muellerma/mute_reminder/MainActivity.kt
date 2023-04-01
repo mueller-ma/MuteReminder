@@ -1,12 +1,15 @@
 package com.github.muellerma.mute_reminder
 
+import android.Manifest
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.Manifest
 import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.pm.ShortcutInfoCompat
+import androidx.core.content.pm.ShortcutManagerCompat
+import androidx.core.graphics.drawable.IconCompat
 import androidx.core.view.isGone
 import com.github.muellerma.mute_reminder.databinding.ActivityMainBinding
 import com.github.muellerma.mute_reminder.databinding.BottomSheetPermissionsBinding
@@ -32,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         mediaAudioManager = MediaAudioManager(this)
         setupOnClickListeners()
         showPermissionsDialogIfRequired()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
+            ShortcutManagerCompat.addDynamicShortcuts(this, listOf(getShortcutInfo()))
+        }
     }
 
     override fun onResume() {
@@ -93,6 +99,19 @@ class MainActivity : AppCompatActivity() {
         muteMedia.setOnClickListener {
             mediaAudioManager.muteMedia()
         }
+    }
+
+    private fun getShortcutInfo(): ShortcutInfoCompat {
+        Log.d(TAG, "getShortcutInfo()")
+        val intent = Intent(this, InvisibleActivity::class.java)
+            .setAction(InvisibleActivity.ACTION_MUTE)
+        return ShortcutInfoCompat.Builder(this, "mute")
+            .setIntent(intent)
+            .setShortLabel(getString(R.string.mute_media_short))
+            .setLongLabel(getString(R.string.mute_media))
+            .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_shortcut_mute))
+            .setAlwaysBadged()
+            .build()
     }
 
     companion object {

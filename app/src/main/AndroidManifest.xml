@@ -26,6 +26,12 @@
             android:name="com.github.muellerma.mute_reminder.PreferenceActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".InvisibleActivity"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.NoDisplay" />
+
         <receiver
                 android:name=".RestartReceiver"
                 android:exported="false">
