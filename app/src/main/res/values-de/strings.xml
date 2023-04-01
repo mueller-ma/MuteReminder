@@ -10,6 +10,7 @@
     <string name="permission_button">Fehlende Berechtigung gewähren</string>
     <string name="permissions_hint">Mute Reminder benötigt Berechtigungen, um Benachrichtigungen anzuzeigen und auf Ereignisse zu reagieren, z.B. Bluetooth-Headset verbunden</string>
     <string name="mute_media">Medien stumm schalten</string>
+    <string name="mute_media_short">Stumm</string>
     <string name="mute_media_failed">Fehler beim Stummschalten</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Medien nicht stummgeschaltet</string>
