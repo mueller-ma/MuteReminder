@@ -10,6 +10,7 @@
     <string name="permission_button">不足している権限を許可</string>
     <string name="permissions_hint">通知を表示したりイベントに反応したりするには、許可が必要です。例えば、Bluetoothヘッドセットが接続された際のイベントなどです。</string>
     <string name="mute_media">メディア音量をミュート</string>
+    <string name="mute_media_short">ミュート</string>
     <string name="mute_media_failed">ボリュームのミュートに失敗しました</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">メディアはミュートされていません</string>
