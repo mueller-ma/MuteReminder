@@ -13,6 +13,7 @@
     <string name="permission_button">Grant missing permission</string>
     <string name="permissions_hint">Mute reminder requires permissions to show notifications and react on events, e.g. bluetooth headset connected</string>
     <string name="mute_media">Mute media volume</string>
+    <string name="mute_media_short">Mute</string>
     <string name="mute_media_failed">Failed to mute volume</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Media not muted</string>
