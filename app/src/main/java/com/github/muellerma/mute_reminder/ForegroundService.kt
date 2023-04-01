@@ -1,6 +1,7 @@
 package com.github.muellerma.mute_reminder
 
 
+import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -75,38 +76,40 @@ class ForegroundService : Service() {
             }
             shouldNotify -> {
                 Log.d(TAG, "Should notify, show notification")
-
-                //create pendingIntent, click to send mute action
-                val intent = Intent(this, ForegroundService::class.java)
-                intent.action = ACTION_MUTE_MEDIA
-                val pendingIntent = PendingIntent.getService(
-                    this,
-                    0,
-                    intent,
-                    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent_Immutable
-                )
-                val muteAction = NotificationCompat.Action(
-                    R.drawable.ic_baseline_volume_mute_24,
-                    getString(R.string.mute_media),
-                    pendingIntent
-                )
-                val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ALERT_ID)
-                    .setContentTitle(getString(R.string.notification_reminder_text))
-                    .setTicker(getString(R.string.notification_reminder_text))
-                    .setSmallIcon(R.drawable.ic_baseline_volume_up_24)
-                    .setOngoing(true)
-                    .setShowWhen(true)
-                    .setWhen(System.currentTimeMillis())
-                    .setColor(ContextCompat.getColor(applicationContext, R.color.md_theme_light_primary))
-                    .setCategory(NotificationCompat.CATEGORY_SERVICE)
-                    .addAction(muteAction)
-                nm.notify(NOTIFICATION_ALERT_ID, notificationBuilder.build())
+                nm.notify(NOTIFICATION_ALERT_ID, getNotification())
             }
             else -> {
                 Log.d(TAG, "Should not notify, hide notification")
                 nm.cancel(NOTIFICATION_ALERT_ID)
             }
         }
+    }
+
+    private fun getNotification(): Notification {
+        val intent = Intent(this, ForegroundService::class.java)
+        intent.action = ACTION_MUTE_MEDIA
+        val pendingIntent = PendingIntent.getService(
+            this,
+            0,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent_Immutable
+        )
+        val muteAction = NotificationCompat.Action(
+            R.drawable.ic_baseline_volume_mute_24,
+            getString(R.string.mute_media),
+            pendingIntent
+        )
+        return NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ALERT_ID)
+            .setContentTitle(getString(R.string.notification_reminder_text))
+            .setTicker(getString(R.string.notification_reminder_text))
+            .setSmallIcon(R.drawable.ic_baseline_volume_up_24)
+            .setOngoing(true)
+            .setShowWhen(true)
+            .setWhen(System.currentTimeMillis())
+            .setColor(ContextCompat.getColor(applicationContext, R.color.md_theme_light_primary))
+            .setCategory(NotificationCompat.CATEGORY_SERVICE)
+            .addAction(muteAction)
+            .build()
     }
 
     private fun isNotificationShown(nm: NotificationManager): Boolean {
