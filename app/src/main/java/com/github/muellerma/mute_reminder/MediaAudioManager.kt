@@ -38,18 +38,26 @@ class MediaAudioManager(private val context: Context) {
 
     private fun usesRemoteOutput(): Boolean {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val ignoreOutputs = listOf(
+            val ignoreOutputs = mutableListOf(
                 AudioDeviceInfo.TYPE_BLUETOOTH_A2DP,
                 AudioDeviceInfo.TYPE_WIRED_HEADPHONES,
                 AudioDeviceInfo.TYPE_WIRED_HEADSET
             )
 
-            val remoteOutputs = audioManager
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                ignoreOutputs.add(AudioDeviceInfo.TYPE_USB_HEADSET)
+            }
+
+            val outputs = audioManager
                 .getDevices(AudioManager.GET_DEVICES_OUTPUTS)
                 .filter { device -> device.isSink }
+
+            Log.d(TAG, "Connected to sinks: ${outputs.joinToString("|") { "${it.productName}, ${it.type}" }}")
+
+            val remoteOutputs = outputs
                 .filter { device -> device.type in ignoreOutputs }
 
-            Log.d(TAG, "Connected to ${remoteOutputs.joinToString(", ") { it.productName }}")
+            Log.d(TAG, "Connected to remote sinks: ${remoteOutputs.joinToString("|") { "${it.productName}, ${it.type}" }}")
             remoteOutputs.isNotEmpty()
         } else {
             @Suppress("DEPRECATION")
