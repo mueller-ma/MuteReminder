@@ -1,0 +1,2 @@
+* Add launcher shortcut
+* Ignore USB output
