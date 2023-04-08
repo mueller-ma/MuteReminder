@@ -10,6 +10,7 @@
     <string name="permission_button">Concedere l\'autorizzazione mancante</string>
     <string name="permissions_hint">Mute reminder necessita queste autorizzazioni per mostrare notifiche e reagire agli eventi come cuffie bluetooth collegate</string>
     <string name="mute_media">Silenzia volume multimediale</string>
+    <string name="mute_media_short">Silenzia</string>
     <string name="mute_media_failed">Impossibile disattivare il volume</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Audio non silenziato</string>
