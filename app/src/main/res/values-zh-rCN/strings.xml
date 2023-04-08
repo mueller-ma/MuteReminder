@@ -12,6 +12,7 @@
     <string name="permission_button">授予缺少的权限</string>
     <string name="permissions_hint">静音提示器需要权限以显示通知与响应事件（例如“蓝牙耳机已连接”）</string>
     <string name="mute_media">静音媒体音量</string>
+    <string name="mute_media_short">静音</string>
     <string name="mute_media_failed">静音失败</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">没有静音媒体音量</string>
