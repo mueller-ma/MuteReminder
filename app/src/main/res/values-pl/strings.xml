@@ -10,6 +10,7 @@
     <string name="permission_button">Udziel brakujących uprawnień</string>
     <string name="permissions_hint">Wyciszenie przypomnienia wymaga uprawnień do wyświetlania powiadomień i reagowania na wydarzenia, np. podłączony zestaw słuchawkowy bluetooth</string>
     <string name="mute_media">Wycisz głośność multimediów</string>
+    <string name="mute_media_short">Wycisz</string>
     <string name="mute_media_failed">Wyciszenie głośności nie powiodło się</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Multimedia nie wyciszone</string>
