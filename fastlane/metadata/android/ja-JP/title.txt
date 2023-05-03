@@ -1,1 +1,1 @@
-通知をミュートする
+Mute reminder
