@@ -26,6 +26,7 @@
     <string name="general">General</string>
     <string name="notify_only_when_muted">Notify only when ring tone is muted</string>
     <string name="about">About</string>
+    <string name="debug_info">Information for troubleshooting</string>
 
     <!-- About menu -->
     <string name="aboutLibraries_description_special1_name" translatable="false" tools:ignore="UnusedResources">GitHub</string>

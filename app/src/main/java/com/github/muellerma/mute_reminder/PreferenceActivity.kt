@@ -1,9 +1,13 @@
 package com.github.muellerma.mute_reminder
 
+import android.app.usage.UsageStatsManager
+import android.os.Build
 import android.os.Bundle
+import android.os.PowerManager
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.getSystemService
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -45,8 +49,7 @@ class PreferenceActivity : AppCompatActivity() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             addPreferencesFromResource(R.xml.pref_main)
 
-            val aboutPref = getPreference("about")
-            aboutPref.setOnPreferenceClickListener {
+            getPreference("about").setOnPreferenceClickListener {
                 val fragment = LibsBuilder()
                     .withAboutIconShown(true)
                     .withAboutVersionShownName(true)
@@ -60,6 +63,24 @@ class PreferenceActivity : AppCompatActivity() {
                     replace(prefActivity.binding.activityContent.id, fragment, "about")
                 }
                 true
+            }
+
+            var debugInfo = ""
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                val isIgnoringBatteryOptimizations = requireContext()
+                    .getSystemService<PowerManager>()!!
+                    .isIgnoringBatteryOptimizations(BuildConfig.APPLICATION_ID)
+                debugInfo += "isIgnoringBatteryOptimizations = $isIgnoringBatteryOptimizations\n"
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                val appStandbyBucket = requireContext()
+                    .getSystemService<UsageStatsManager>()!!
+                    .appStandbyBucket
+                debugInfo += "appStandbyBucket = $appStandbyBucket\n"
+            }
+            getPreference("debug").summary = debugInfo
+            if (debugInfo.isEmpty()) {
+                preferenceScreen.removePreferenceRecursively("debug")
             }
         }
     }

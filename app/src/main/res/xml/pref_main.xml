@@ -12,5 +12,10 @@
         <Preference
             android:key="about"
             android:title="@string/about" />
+        <Preference
+            android:key="debug"
+            android:singleLineTitle="false"
+            android:title="@string/debug_info"
+            android:enabled="false" />
     </PreferenceCategory>
 </PreferenceScreen>
