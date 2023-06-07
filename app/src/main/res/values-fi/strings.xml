@@ -10,6 +10,7 @@
     <string name="permission_button">Myönnä puuttuva lupa</string>
     <string name="permissions_hint">Mykistä muistutus vaatii käyttöoikeudet ilmoitusten näyttämiseen ja tapahtumiin reagointiin, esim. Bluetooth-kuulokkeet yhdistetty</string>
     <string name="mute_media">Mykistä median äänenvoimakkuus</string>
+    <string name="mute_media_short">Mykistä</string>
     <string name="mute_media_failed">Äänenvoimakkuuden mykistäminen epäonnistui</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Mediaa ei mykistetty</string>
@@ -21,5 +22,6 @@
     <string name="general">Yleiset</string>
     <string name="notify_only_when_muted">Ilmoita vain kun soittoääni on mykistetty</string>
     <string name="about">Tietoja</string>
+    <string name="debug_info">Vianmäärityksen tiedot</string>
     <!-- About menu -->
 </resources>
