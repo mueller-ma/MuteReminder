@@ -22,5 +22,6 @@
     <string name="general">Generali</string>
     <string name="notify_only_when_muted">Notifica solo quando la suoneria è in silenzioso</string>
     <string name="about">Informazioni</string>
+    <string name="debug_info">Informazioni per la risoluzione dei problemi</string>
     <!-- About menu -->
 </resources>
