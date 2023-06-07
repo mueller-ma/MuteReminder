@@ -10,6 +10,7 @@
     <string name="permission_button">Acordă permisiunea lipsă</string>
     <string name="permissions_hint">Memento-ul mute necesită permisiuni pentru a afișa notificări și a reacționa la evenimente, de ex. set căști bluetooth conectat</string>
     <string name="mute_media">Dezactivează volumul media</string>
+    <string name="mute_media_short">Amuțit</string>
     <string name="mute_media_failed">Esuare mut volum</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Media nu este dezactivată</string>
@@ -21,5 +22,6 @@
     <string name="general">Generalități</string>
     <string name="notify_only_when_muted">Notifică numai când sunetul de sunet este dezactivat</string>
     <string name="about">Despre</string>
+    <string name="debug_info">Informaţii pentru depanare</string>
     <!-- About menu -->
 </resources>
