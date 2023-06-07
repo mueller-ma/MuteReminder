@@ -10,6 +10,7 @@
     <string name="permission_button">Bevilja saknad behörighet</string>
     <string name="permissions_hint">Tysta påminnelse kräver behörigheter för att visa aviseringar och reagera på händelser, t.ex. Bluetooth-headset ansluten</string>
     <string name="mute_media">Tysta media-volym</string>
+    <string name="mute_media_short">Tysta</string>
     <string name="mute_media_failed">Det gick inte att tysta volymen</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Media är inte tystad</string>
@@ -21,5 +22,6 @@
     <string name="general">Allmänt</string>
     <string name="notify_only_when_muted">Notifiera endast när ringsignalen är tystad</string>
     <string name="about">Om</string>
+    <string name="debug_info">Information för felsökning</string>
     <!-- About menu -->
 </resources>
