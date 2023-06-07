@@ -3,24 +3,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
-    <string name="app_name">Mute reminder</string>
+    <string name="app_name">Mute Reminder</string>
     <!-- MainActivity -->
-    <string name="main_activity_hint">着信音がミュートされているが、メディア音量がミュートされていない場合に通知を表示します。 この動作は、設定で変更できます。</string>
+    <string name="main_activity_hint">着信音がミュートされているがメディアはミュートされていない場合、ワンタッチでメディアをミュートできる通知を表示します。 着信音がミュートされていない場合に通知を表示するかは、設定で変更できます。</string>
     <string name="error_no_browser_found">ブラウザが見つかりませんでした</string>
     <string name="permission_button">不足している権限を許可</string>
-    <string name="permissions_hint">通知を表示したりイベントに反応したりするには、許可が必要です。例えば、Bluetoothヘッドセットが接続された際のイベントなどです。</string>
-    <string name="mute_media">メディア音量をミュート</string>
+    <string name="permissions_hint">通知の表示やBluetoothデバイスに接続するなどのイベントに反応するには、権限の許可が必要です。</string>
+    <string name="mute_media">メディアをミュート</string>
     <string name="mute_media_short">ミュート</string>
-    <string name="mute_media_failed">ボリュームのミュートに失敗しました</string>
+    <string name="mute_media_failed">メディアのミュートに失敗しました。</string>
     <!-- Notifications -->
-    <string name="notification_reminder_text">メディアはミュートされていません</string>
+    <string name="notification_reminder_text">メディアはミュートされていません。</string>
     <string name="notification_reminder_title">リマインダー</string>
-    <string name="notification_background_title">バックグラウンドサービス</string>
-    <string name="notification_background_summary">この通知カテゴリを非表示にできます</string>
+    <string name="notification_background_title">バックグラウンドでの音量などの監視</string>
+    <string name="notification_background_summary">この通知を非表示にすることができます。</string>
     <!-- Settings -->
     <string name="settings">設定</string>
     <string name="general">全般</string>
-    <string name="notify_only_when_muted">着信音がミュートされたときにのみ通知</string>
+    <string name="notify_only_when_muted">着信音がミュートされているときにのみ通知を表示</string>
     <string name="about">このアプリケーションについて</string>
     <!-- About menu -->
 </resources>
