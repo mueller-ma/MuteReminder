@@ -22,5 +22,6 @@
     <string name="general">全般</string>
     <string name="notify_only_when_muted">着信音がミュートされているときにのみ通知を表示</string>
     <string name="about">このアプリケーションについて</string>
+    <string name="debug_info">トラブルシューティングのための情報</string>
     <!-- About menu -->
 </resources>
