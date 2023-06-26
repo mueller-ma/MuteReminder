@@ -7,6 +7,11 @@
     <!-- MainActivity -->
     <string name="main_activity_hint">Zil sesi kapatılmış ancak medya kapatılmamışsa ve medya yerel hoparlörler üzerinden çalınıyorsa bir bildirim gösterilir.</string>
     <string name="error_no_browser_found">Tarayıcı bulunamadı</string>
+    <string name="permission_button">Eksik izni ver</string>
+    <string name="permissions_hint">Susturma hatırlatıcısı, bildirimleri göstermek ve olaylara tepki vermek için izinler gerektirir, örneğin bluetooth kulaklık bağlı</string>
+    <string name="mute_media">Medya sesini kapat</string>
+    <string name="mute_media_short">Sustur</string>
+    <string name="mute_media_failed">Ses kapatılamadı</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Medya sessize alınmamış</string>
     <string name="notification_reminder_title">Hatırlatıcı</string>
@@ -17,5 +22,6 @@
     <string name="general">Genel</string>
     <string name="notify_only_when_muted">Yalnızca zil sesi kapatıldığında bildir</string>
     <string name="about">Hakkında</string>
+    <string name="debug_info">Sorun gidermeye yönelik bilgiler</string>
     <!-- About menu -->
 </resources>
