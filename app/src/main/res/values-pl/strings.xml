@@ -22,5 +22,6 @@
     <string name="general">Ogólne</string>
     <string name="notify_only_when_muted">Powiadamiaj tylko, gdy dzwonek jest wyciszony</string>
     <string name="about">Informacje</string>
+    <string name="debug_info">Informacje o rozwiązywaniu problemów</string>
     <!-- About menu -->
 </resources>

@@ -10,6 +10,7 @@
     <string name="permission_button">Accorder les autorisations manquantes</string>
     <string name="permissions_hint">Le rappel de mise en sourdine nécessite des autorisations pour afficher les notifications et réagir lors d\'événements, par exemple le casque Bluetooth connecté</string>
     <string name="mute_media">Mettre en sourdine le volume des médias</string>
+    <string name="mute_media_short">Couper le son</string>
     <string name="mute_media_failed">Impossible de couper le volume</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Média non mis en sourdine</string>
@@ -21,5 +22,6 @@
     <string name="general">Général</string>
     <string name="notify_only_when_muted">Notifier uniquement lorsque la sonnerie est mise en sourdine</string>
     <string name="about">À propos</string>
+    <string name="debug_info">Informations pour le dépannage</string>
     <!-- About menu -->
 </resources>

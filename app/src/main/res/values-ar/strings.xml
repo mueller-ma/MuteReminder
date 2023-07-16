@@ -10,6 +10,7 @@
     <string name="permission_button">منح الإذن مفقود</string>
     <string name="permissions_hint">كتم التذكير يتطلب أذونات لإظهار الإشعارات والتفاعل على الأحداث، مثل سماعة البلوتوث المتصلة</string>
     <string name="mute_media">كتم صوت الوسائط</string>
+    <string name="mute_media_short">كتم</string>
     <string name="mute_media_failed">فشل في كتم الصوت</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">لم يتم كتم الوسائط</string>
@@ -21,5 +22,6 @@
     <string name="general">عام</string>
     <string name="notify_only_when_muted">إعلام فقط عندما يتم كتم نغمة الرنين</string>
     <string name="about">حول</string>
+    <string name="debug_info">معلومات عن استكشاف الأخطاء</string>
     <!-- About menu -->
 </resources>

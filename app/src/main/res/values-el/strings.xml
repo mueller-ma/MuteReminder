@@ -10,6 +10,7 @@
     <string name="permission_button">Χορήγηση δικαιωμάτων που λείπουν</string>
     <string name="permissions_hint">Η σίγαση υπενθύμισης απαιτεί δικαιώματα για εμφάνιση ειδοποιήσεων και αντίδραση σε συμβάντα, π.χ. συνδεδεμένα ακουστικά bluetooth</string>
     <string name="mute_media">Σίγαση έντασης πολυμέσων</string>
+    <string name="mute_media_short">Σίγαση</string>
     <string name="mute_media_failed">Αποτυχία σίγασης έντασης</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Μη σίγαση πολυμέσων</string>
@@ -21,5 +22,6 @@
     <string name="general">Γενικά</string>
     <string name="notify_only_when_muted">Ειδοποίηση μόνο όταν ο ήχος κλήσης είναι σε σίγαση</string>
     <string name="about">Σχετικά</string>
+    <string name="debug_info">Πληροφορίες για την αντιμετώπιση προβλημάτων</string>
     <!-- About menu -->
 </resources>

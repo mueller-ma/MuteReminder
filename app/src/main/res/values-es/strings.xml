@@ -10,6 +10,7 @@
     <string name="permission_button">Otorgar permiso perdido</string>
     <string name="permissions_hint">Recordatorio de silencio requiere permisos para mostrar notificaciones y reaccionar en eventos, por ejemplo, auriculares bluetooth conectados</string>
     <string name="mute_media">Silenciar volumen multimedia</string>
+    <string name="mute_media_short">Silenciar</string>
     <string name="mute_media_failed">Error al silenciar el volumen</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Medios no silenciados</string>
@@ -21,5 +22,6 @@
     <string name="general">General</string>
     <string name="notify_only_when_muted">Notificar solo cuando el tono de llamada está silenciado</string>
     <string name="about">Acerca de</string>
+    <string name="debug_info">Información para la solución de problemas</string>
     <!-- About menu -->
 </resources>

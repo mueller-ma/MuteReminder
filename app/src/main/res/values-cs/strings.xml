@@ -10,6 +10,7 @@
     <string name="permission_button">Udělit chybějící oprávnění</string>
     <string name="permissions_hint">Ztlumit připomenutí vyžaduje oprávnění k zobrazování oznámení a reakci na události, např. připojená Bluetooth sluchátka</string>
     <string name="mute_media">Ztlumit hlasitost médií</string>
+    <string name="mute_media_short">Ztlumit</string>
     <string name="mute_media_failed">Nepodařilo se ztlumit hlasitost</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Média nejsou ztlumena</string>
@@ -21,5 +22,6 @@
     <string name="general">Obecná ustanovení</string>
     <string name="notify_only_when_muted">Upozornit pouze při ztlumeném vyzvánění</string>
     <string name="about">O aplikaci</string>
+    <string name="debug_info">Informace pro řešení problémů</string>
     <!-- About menu -->
 </resources>

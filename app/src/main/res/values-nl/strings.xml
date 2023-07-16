@@ -10,6 +10,7 @@
     <string name="permission_button">Ontbrekende toestemming verlenen</string>
     <string name="permissions_hint">Dempen herinnering vereist machtigingen om meldingen te tonen en te reageren op gebeurtenissen, bijvoorbeeld bluetooth headset verbonden</string>
     <string name="mute_media">Mediavolume uitschakelen</string>
+    <string name="mute_media_short">Dempen</string>
     <string name="mute_media_failed">Kan volume niet dempen</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Media niet gedempt</string>
@@ -21,5 +22,6 @@
     <string name="general">Algemeen</string>
     <string name="notify_only_when_muted">Waarschuw alleen wanneer beltoon is gedempt</string>
     <string name="about">Informatie</string>
+    <string name="debug_info">Informatie voor het oplossen van problemen</string>
     <!-- About menu -->
 </resources>

@@ -10,6 +10,7 @@
     <string name="permission_button">Conceder permissão faltando</string>
     <string name="permissions_hint">Silenciar lembrete requer permissões para mostrar notificações e reagir em eventos, por exemplo, fone de ouvido bluetooth conectado</string>
     <string name="mute_media">Silenciar volume de mídia</string>
+    <string name="mute_media_short">Silenciar</string>
     <string name="mute_media_failed">Falha ao silenciar o volume</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Mídia não silenciada</string>
@@ -21,5 +22,6 @@
     <string name="general">Gerais</string>
     <string name="notify_only_when_muted">Notificar apenas quando o toque de toque for silenciado</string>
     <string name="about">SOBRE</string>
+    <string name="debug_info">Informações para solução de problemas</string>
     <!-- About menu -->
 </resources>

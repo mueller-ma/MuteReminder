@@ -10,6 +10,7 @@
     <string name="permission_button">Не хватает разрешения</string>
     <string name="permissions_hint">Отключить напоминание требует разрешения для отображения уведомлений и реагирования на события, например Bluetooth гарнитуры подключены</string>
     <string name="mute_media">Отключить звук мультимедиа</string>
+    <string name="mute_media_short">Заглушить</string>
     <string name="mute_media_failed">Не удалось отключить звук</string>
     <!-- Notifications -->
     <string name="notification_reminder_text">Медиафайл не заглушен</string>
@@ -21,5 +22,6 @@
     <string name="general">Общие</string>
     <string name="notify_only_when_muted">Уведомлять только при отключении звука</string>
     <string name="about">О нас</string>
+    <string name="debug_info">Информация для устранения неполадок</string>
     <!-- About menu -->
 </resources>
