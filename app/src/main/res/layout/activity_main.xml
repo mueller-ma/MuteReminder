@@ -13,6 +13,7 @@
         android:orientation="vertical"
         tools:context=".activities.MainActivity">
 
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
@@ -23,6 +24,17 @@
             app:srcCompat="@drawable/ic_outline_volume_up_120"
             tools:ignore="ContentDescription" />
 
+        <Spinner
+            android:id="@+id/spinner_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp" />
         <TextView
             android:id="@+id/app_name"
             android:layout_width="wrap_content"

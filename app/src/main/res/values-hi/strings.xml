@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation, ExtraTranslation">
+    <!-- Common strings -->
+    <!-- Feel free to actually translate the title -->
+    <string name="app_name">म्यूट रिमाइंडर</string>
+
+    <!-- MainActivity -->
+    <string name="main_activity_hint">यदि रिंगटोन म्यूट है, लेकिन मीडिया म्यूट नहीं है और मीडिया स्थानीय वक्ता पर बजाया जा रहा है, तो एक सूचना दिखाई जाती है। आप सेटिंग्स में इस व्यवहार को बदल सकते हैं।</string>
+    <string name="error_no_browser_found">कोई ब्राउज़र नहीं मिला</string>
+    <string name="permission_button">अनुमति दें</string>
+    <string name="permissions_hint">म्यूट रिमाइंडर अधिसूचनाओं को दिखाने और घटनाओं पर प्रतिक्रिया करने के लिए अनुमतियाँ आवश्यक है, उदाहरण के लिए ब्लूटूथ हेडसेट कनेक्ट किया जाता है</string>
+    <string name="mute_media">मीडिया आवाज़ बंद करें</string>
+    <string name="mute_media_short">म्यूट</string>
+    <string name="mute_media_failed">आवाज़ को म्यूट करने में विफल</string>
+    <!-- Notifications -->
+    <string name="notification_reminder_text">मीडिया म्यूट नहीं है</string>
+    <string name="notification_reminder_title">रिमाइंडर</string>
+    <string name="notification_background_title">पृष्ठभूमि सेवा</string>
+    <string name="notification_background_summary">आप इस सूचना श्रेणी को छुपा सकते हैं</string>
+
+    <!-- Settings -->
+    <string name="settings">सेटिंग्स</string>
+    <string name="general">सामान्य</string>
+    <string name="notify_only_when_muted">केवल जब रिंगटोन म्यूट होता है तो सूचित करें</string>
+    <string name="about">हमारे बारे में</string>
+    <string name="debug_info">खराबी निवारण के लिए जानकारी</string>
+
+    <!-- About menu -->
+    <string name="aboutLibraries_description_special1_name" translatable="false" tools:ignore="UnusedResources">GitHub</string>
+    <string name="aboutLibraries_description_special2_name" translatable="false" tools:ignore="UnusedResources">F-Droid</string>
+    <string name="aboutLibraries_description_special3_name" translatable="false" tools:ignore="UnusedResources">Crowdin</string>
+</resources>

@@ -1,8 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Translation instructions can be found in the Readme -->
-<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation, ExtraTranslation">
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation, ExtraTranslation">
     <!-- Common strings -->
     <!-- Feel free to actually translate the title -->
+    <string name="app_name">Mute reminder</string>
+
     <!-- MainActivity -->
+    <string name="main_activity_hint">A notification is shown if ringtone is muted, but media isn\'t and media would be played over local speakers. You can change this behavior in the settings.</string>
+    <string name="error_no_browser_found">No browser found</string>
+    <string name="permission_button">Grant missing permission</string>
+    <string name="permissions_hint">Mute reminder requires permissions to show notifications and react on events, e.g. bluetooth headset connected</string>
+    <string name="mute_media">Mute media volume</string>
+    <string name="mute_media_short">Mute</string>
+    <string name="mute_media_failed">Failed to mute volume</string>
     <!-- Notifications -->
+    <string name="notification_reminder_text">Media not muted</string>
+    <string name="notification_reminder_title">Reminder</string>
+    <string name="notification_background_title">Background service</string>
+    <string name="notification_background_summary">You can hide this notification category</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="general">General</string>
+    <string name="notify_only_when_muted">Notify only when ring tone is muted</string>
+    <string name="about">About</string>
+    <string name="debug_info">Information for troubleshooting</string>
+
+    <!-- About menu -->
+    <string name="aboutLibraries_description_special1_name" translatable="false" tools:ignore="UnusedResources">GitHub</string>
+    <string name="aboutLibraries_description_special2_name" translatable="false" tools:ignore="UnusedResources">F-Droid</string>
+    <string name="aboutLibraries_description_special3_name" translatable="false" tools:ignore="UnusedResources">Crowdin</string>
 </resources>
