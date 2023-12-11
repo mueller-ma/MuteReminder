@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
             ShortcutManagerCompat.addDynamicShortcuts(this, listOf(getShortcutInfo()))
         }
+        ForegroundService.changeState(this, true)
     }
 
     override fun onResume() {
