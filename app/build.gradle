@@ -44,6 +44,10 @@ android {
     lint {
         abortOnError false
     }
+    androidResources {
+        generateLocaleConfig = true
+    }
+
 
     namespace 'com.github.muellerma.mute_reminder'
 }
