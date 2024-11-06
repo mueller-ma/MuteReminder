@@ -7,7 +7,11 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.Service
 import android.bluetooth.BluetoothDevice
-import android.content.*
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.content.SharedPreferences
 import android.database.ContentObserver
 import android.media.AudioManager
 import android.os.Build
@@ -161,7 +165,11 @@ class ForegroundService : Service() {
             }
         }
         // Register for DND and bluetooth changes
-        registerReceiver(muteListener, intentFilter)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(muteListener, intentFilter, RECEIVER_EXPORTED)
+        } else {
+            registerReceiver(muteListener, intentFilter)
+        }
         prefs.sharedPrefs.registerOnSharedPreferenceChangeListener(prefsListener)
         handleVolumeChanged()
 
