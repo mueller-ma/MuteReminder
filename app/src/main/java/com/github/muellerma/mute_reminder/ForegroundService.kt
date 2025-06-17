@@ -67,7 +67,7 @@ class ForegroundService : Service() {
     }
 
     private val prefsListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
-        if (key == Prefs.NOTIFY_ONLY_WHEN_MUTED) handleVolumeChanged()
+        if (key == Prefs.NOTIFY_ONLY_WHEN_MUTED || key == Prefs.AUTO_MUTE) handleVolumeChanged()
     }
 
     private fun handleVolumeChanged() {
@@ -79,8 +79,14 @@ class ForegroundService : Service() {
                 Log.d(TAG, "Should notify, notification is already shown")
             }
             shouldNotify -> {
-                Log.d(TAG, "Should notify, show notification")
-                nm.notify(NOTIFICATION_ALERT_ID, getNotification())
+
+                if (prefs.autoMute) {
+                    Log.d(TAG, "Should notify, auto mute enabled, muting media")
+                    mediaAudioManager.muteMedia()
+                } else {
+                    Log.d(TAG, "Should notify, show notification")
+                    nm.notify(NOTIFICATION_ALERT_ID, getNotification())
+                }
             }
             else -> {
                 Log.d(TAG, "Should not notify, hide notification")
