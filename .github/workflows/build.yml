@@ -22,3 +22,9 @@ jobs:
 
       - name: Build
         run: bash gradlew build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: unsigned-apk
+          path: app/build/outputs/apk
