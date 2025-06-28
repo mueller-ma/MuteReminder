@@ -79,7 +79,6 @@ class ForegroundService : Service() {
                 Log.d(TAG, "Should notify, notification is already shown")
             }
             shouldNotify -> {
-
                 if (prefs.autoMute) {
                     Log.d(TAG, "Should notify, auto mute enabled, muting media")
                     mediaAudioManager.muteMedia()
