@@ -21,6 +21,7 @@
     <string name="settings">Setări</string>
     <string name="general">Generalități</string>
     <string name="notify_only_when_muted">Notifică numai când sunetul de sunet este dezactivat</string>
+    <string name="auto_mute">Oprire automată</string>
     <string name="about">Despre</string>
     <string name="debug_info">Informaţii pentru depanare</string>
     <!-- About menu -->
