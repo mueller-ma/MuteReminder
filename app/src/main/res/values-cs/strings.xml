@@ -21,6 +21,7 @@
     <string name="settings">Nastavení</string>
     <string name="general">Obecná ustanovení</string>
     <string name="notify_only_when_muted">Upozornit pouze při ztlumeném vyzvánění</string>
+    <string name="auto_mute">Automaticky ztlumit</string>
     <string name="about">O aplikaci</string>
     <string name="debug_info">Informace pro řešení problémů</string>
     <!-- About menu -->
