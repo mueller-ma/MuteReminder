@@ -21,6 +21,7 @@
     <string name="settings">Asetukset</string>
     <string name="general">Yleiset</string>
     <string name="notify_only_when_muted">Ilmoita vain kun soittoääni on mykistetty</string>
+    <string name="auto_mute">Automaattinen mykistys</string>
     <string name="about">Tietoja</string>
     <string name="debug_info">Vianmäärityksen tiedot</string>
     <!-- About menu -->
