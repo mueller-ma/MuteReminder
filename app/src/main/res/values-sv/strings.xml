@@ -21,6 +21,7 @@
     <string name="settings">Inställningar</string>
     <string name="general">Allmänt</string>
     <string name="notify_only_when_muted">Notifiera endast när ringsignalen är tystad</string>
+    <string name="auto_mute">Tysta automatiskt</string>
     <string name="about">Om</string>
     <string name="debug_info">Information för felsökning</string>
     <!-- About menu -->
