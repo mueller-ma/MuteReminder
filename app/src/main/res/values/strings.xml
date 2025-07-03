@@ -25,6 +25,7 @@
     <string name="settings">Settings</string>
     <string name="general">General</string>
     <string name="notify_only_when_muted">Notify only when ring tone is muted</string>
+    <string name="auto_mute">Auto mute</string>
     <string name="about">About</string>
     <string name="debug_info">Information for troubleshooting</string>
 

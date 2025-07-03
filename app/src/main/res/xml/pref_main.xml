@@ -7,6 +7,11 @@
             android:defaultValue="true"
             app:singleLineTitle="false"
             android:title="@string/notify_only_when_muted" />
+        <SwitchPreferenceCompat
+            android:key="auto_mute"
+            android:defaultValue="false"
+            app:singleLineTitle="false"
+            android:title="@string/auto_mute" />
     </PreferenceCategory>
     <PreferenceCategory>
         <Preference
