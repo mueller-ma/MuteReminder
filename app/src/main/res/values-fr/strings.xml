@@ -21,6 +21,7 @@
     <string name="settings">Paramètres</string>
     <string name="general">Général</string>
     <string name="notify_only_when_muted">Notifier uniquement lorsque la sonnerie est mise en sourdine</string>
+    <string name="auto_mute">Coupure automatique</string>
     <string name="about">À propos</string>
     <string name="debug_info">Informations pour le dépannage</string>
     <!-- About menu -->
