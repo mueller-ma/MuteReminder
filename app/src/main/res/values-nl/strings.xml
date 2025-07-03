@@ -21,6 +21,7 @@
     <string name="settings">Instellingen</string>
     <string name="general">Algemeen</string>
     <string name="notify_only_when_muted">Waarschuw alleen wanneer beltoon is gedempt</string>
+    <string name="auto_mute">Automatisch dempen</string>
     <string name="about">Informatie</string>
     <string name="debug_info">Informatie voor het oplossen van problemen</string>
     <!-- About menu -->
