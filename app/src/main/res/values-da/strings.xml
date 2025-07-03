@@ -21,6 +21,7 @@
     <string name="settings">Indstillinger</string>
     <string name="general">Generelt</string>
     <string name="notify_only_when_muted">Giv kun besked, når ringetone er slået fra</string>
+    <string name="auto_mute">Automatisk lydløs</string>
     <string name="about">Om</string>
     <string name="debug_info">Oplysninger om fejlfinding</string>
     <!-- About menu -->
