@@ -21,6 +21,7 @@
     <string name="settings">Definições</string>
     <string name="general">Gerais</string>
     <string name="notify_only_when_muted">Notificar apenas quando o toque de toque for silenciado</string>
+    <string name="auto_mute">Silenciar automaticamente</string>
     <string name="about">SOBRE</string>
     <string name="debug_info">Informações para solução de problemas</string>
     <!-- About menu -->
