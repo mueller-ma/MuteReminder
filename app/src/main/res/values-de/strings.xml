@@ -21,6 +21,7 @@
     <string name="settings">Einstellungen</string>
     <string name="general">Allgemein</string>
     <string name="notify_only_when_muted">Nur benachrichtigen, wenn Klingelton stumm ist</string>
+    <string name="auto_mute">Automatisch stumm schalten</string>
     <string name="about">Über</string>
     <string name="debug_info">Informationen zur Fehlerbehebung</string>
     <!-- About menu -->
