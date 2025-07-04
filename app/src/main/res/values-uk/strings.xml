@@ -21,6 +21,7 @@
     <string name="settings">Налаштування</string>
     <string name="general">Основне</string>
     <string name="notify_only_when_muted">Сповіщати лише коли звук дзвінка вимкнено</string>
+    <string name="auto_mute">Вимкнути звук</string>
     <string name="about">Про програму</string>
     <string name="debug_info">Інформація щодо усунення несправностей</string>
     <!-- About menu -->

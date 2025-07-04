@@ -21,6 +21,7 @@
     <string name="settings">Настройки</string>
     <string name="general">Общие</string>
     <string name="notify_only_when_muted">Уведомлять только при отключении звука</string>
+    <string name="auto_mute">Автоотключение звука</string>
     <string name="about">О нас</string>
     <string name="debug_info">Информация для устранения неполадок</string>
     <!-- About menu -->

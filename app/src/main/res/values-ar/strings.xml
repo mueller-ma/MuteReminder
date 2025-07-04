@@ -21,6 +21,7 @@
     <string name="settings">الإعدادات</string>
     <string name="general">عام</string>
     <string name="notify_only_when_muted">إعلام فقط عندما يتم كتم نغمة الرنين</string>
+    <string name="auto_mute">كتم تلقائي</string>
     <string name="about">حول</string>
     <string name="debug_info">معلومات عن استكشاف الأخطاء</string>
     <!-- About menu -->

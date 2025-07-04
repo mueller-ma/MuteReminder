@@ -23,6 +23,7 @@
     <string name="settings">设置</string>
     <string name="general">通用</string>
     <string name="notify_only_when_muted">仅在铃声静音时弹出通知</string>
+    <string name="auto_mute">自动静音</string>
     <string name="about">关于</string>
     <string name="debug_info">故障排除信息</string>
     <!-- About menu -->

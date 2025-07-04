@@ -21,6 +21,7 @@
     <string name="settings">Ajustes</string>
     <string name="general">General</string>
     <string name="notify_only_when_muted">Notificar solo cuando el tono de llamada está silenciado</string>
+    <string name="auto_mute">Auto silenciar</string>
     <string name="about">Acerca de</string>
     <string name="debug_info">Información para la solución de problemas</string>
     <!-- About menu -->

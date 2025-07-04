@@ -21,6 +21,7 @@
     <string name="settings">Innstillinger</string>
     <string name="general">Generelt</string>
     <string name="notify_only_when_muted">Varsle kun når ringetonen er dempet</string>
+    <string name="auto_mute">Automatisk demping</string>
     <string name="about">Om</string>
     <string name="debug_info">Informasjon for feilsøking</string>
     <!-- About menu -->
