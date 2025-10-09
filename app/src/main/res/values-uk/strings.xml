@@ -13,14 +13,14 @@
     <string name="mute_media_short">Вимкнути звук</string>
     <string name="mute_media_failed">Не вдалося вимкнути звук</string>
     <!-- Notifications -->
-    <string name="notification_reminder_text">Мультимедіа не заглушено</string>
+    <string name="notification_reminder_text">Мультимедіа зі звуком</string>
     <string name="notification_reminder_title">Нагадування</string>
     <string name="notification_background_title">Фонова служба</string>
     <string name="notification_background_summary">Можете сховати цю категорію сповіщень</string>
     <!-- Settings -->
     <string name="settings">Налаштування</string>
     <string name="general">Основне</string>
-    <string name="notify_only_when_muted">Сповіщати лише коли звук дзвінка вимкнено</string>
+    <string name="notify_only_when_muted">Сповіщати лише коли звук виклику вимкнено</string>
     <string name="auto_mute">Автоматично вимикати звук</string>
     <string name="about">Про програму</string>
     <string name="debug_info">Інформація щодо усунення несправностей</string>
